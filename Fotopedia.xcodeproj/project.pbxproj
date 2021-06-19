@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,13 @@
 		1DBA8F04267E6EB1007C6F77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DBA8F02267E6EB1007C6F77 /* LaunchScreen.storyboard */; };
 		1DBA8F0F267E6EB1007C6F77 /* FotopediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8F0E267E6EB1007C6F77 /* FotopediaTests.swift */; };
 		1DBA8F1A267E6EB1007C6F77 /* FotopediaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8F19267E6EB1007C6F77 /* FotopediaUITests.swift */; };
+		1DBA8F5C267E7389007C6F77 /* BaseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8F5B267E7389007C6F77 /* BaseBuilder.swift */; };
+		1DBA8F64267E73A9007C6F77 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8F63267E73A9007C6F77 /* BaseViewController.swift */; };
+		1DBA8F69267E73BC007C6F77 /* BaseSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8F68267E73BC007C6F77 /* BaseSplitViewController.swift */; };
+		1DBA8F6E267E73CB007C6F77 /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8F6D267E73CB007C6F77 /* BaseInteractor.swift */; };
+		1DBA8F73267E73D9007C6F77 /* BaseProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8F72267E73D9007C6F77 /* BaseProtocols.swift */; };
+		1DBA8F78267E740A007C6F77 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8F77267E740A007C6F77 /* BasePresenter.swift */; };
+		1DBA8F7D267E7413007C6F77 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8F7C267E7413007C6F77 /* BaseRouter.swift */; };
 		637BB798B09B399B54CFD749 /* Pods_Fotopedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3FA71637E83656A93929F /* Pods_Fotopedia.framework */; };
 		B488600F6B30A509B1B1A26B /* Pods_FotopediaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D0F78250E1CFBC8DABBE85 /* Pods_FotopediaTests.framework */; };
 /* End PBXBuildFile section */
@@ -49,6 +56,13 @@
 		1DBA8F15267E6EB1007C6F77 /* FotopediaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FotopediaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DBA8F19267E6EB1007C6F77 /* FotopediaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotopediaUITests.swift; sourceTree = "<group>"; };
 		1DBA8F1B267E6EB1007C6F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DBA8F5B267E7389007C6F77 /* BaseBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBuilder.swift; sourceTree = "<group>"; };
+		1DBA8F63267E73A9007C6F77 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		1DBA8F68267E73BC007C6F77 /* BaseSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSplitViewController.swift; sourceTree = "<group>"; };
+		1DBA8F6D267E73CB007C6F77 /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
+		1DBA8F72267E73D9007C6F77 /* BaseProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProtocols.swift; sourceTree = "<group>"; };
+		1DBA8F77267E740A007C6F77 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		1DBA8F7C267E7413007C6F77 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		28D0F78250E1CFBC8DABBE85 /* Pods_FotopediaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FotopediaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3435C0724A1265835298081F /* Pods-FotopediaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FotopediaTests.release.xcconfig"; path = "Target Support Files/Pods-FotopediaTests/Pods-FotopediaTests.release.xcconfig"; sourceTree = "<group>"; };
 		364FFCC4C305DD869EC59564 /* Pods-Fotopedia-FotopediaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fotopedia-FotopediaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Fotopedia-FotopediaUITests/Pods-Fotopedia-FotopediaUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,7 +111,6 @@
 				9BC7E267D0DD53EA3EA18516 /* Pods-FotopediaTests.debug.xcconfig */,
 				3435C0724A1265835298081F /* Pods-FotopediaTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -158,6 +171,7 @@
 		1DBA8F40267E70E9007C6F77 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1DBA8F5A267E7364007C6F77 /* Base_Scene */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -215,6 +229,20 @@
 				1DBA8F00267E6EB1007C6F77 /* Assets.xcassets */,
 			);
 			path = Xcode_Assets;
+			sourceTree = "<group>";
+		};
+		1DBA8F5A267E7364007C6F77 /* Base_Scene */ = {
+			isa = PBXGroup;
+			children = (
+				1DBA8F5B267E7389007C6F77 /* BaseBuilder.swift */,
+				1DBA8F63267E73A9007C6F77 /* BaseViewController.swift */,
+				1DBA8F68267E73BC007C6F77 /* BaseSplitViewController.swift */,
+				1DBA8F6D267E73CB007C6F77 /* BaseInteractor.swift */,
+				1DBA8F72267E73D9007C6F77 /* BaseProtocols.swift */,
+				1DBA8F77267E740A007C6F77 /* BasePresenter.swift */,
+				1DBA8F7C267E7413007C6F77 /* BaseRouter.swift */,
+			);
+			path = Base_Scene;
 			sourceTree = "<group>";
 		};
 		D239612BCAEA790B205D7D4D /* Frameworks */ = {
@@ -465,7 +493,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DBA8EF8267E6EB0007C6F77 /* AppDelegate.swift in Sources */,
+				1DBA8F7D267E7413007C6F77 /* BaseRouter.swift in Sources */,
+				1DBA8F78267E740A007C6F77 /* BasePresenter.swift in Sources */,
+				1DBA8F64267E73A9007C6F77 /* BaseViewController.swift in Sources */,
 				1DBA8EFA267E6EB0007C6F77 /* SceneDelegate.swift in Sources */,
+				1DBA8F5C267E7389007C6F77 /* BaseBuilder.swift in Sources */,
+				1DBA8F69267E73BC007C6F77 /* BaseSplitViewController.swift in Sources */,
+				1DBA8F73267E73D9007C6F77 /* BaseProtocols.swift in Sources */,
+				1DBA8F6E267E73CB007C6F77 /* BaseInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
