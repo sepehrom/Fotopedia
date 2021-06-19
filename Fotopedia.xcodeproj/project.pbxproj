@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		1DBA8EF8267E6EB0007C6F77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8EF7267E6EB0007C6F77 /* AppDelegate.swift */; };
 		1DBA8EFA267E6EB0007C6F77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8EF9267E6EB0007C6F77 /* SceneDelegate.swift */; };
-		1DBA8EFC267E6EB0007C6F77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8EFB267E6EB0007C6F77 /* ViewController.swift */; };
-		1DBA8EFF267E6EB0007C6F77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DBA8EFD267E6EB0007C6F77 /* Main.storyboard */; };
 		1DBA8F01267E6EB1007C6F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DBA8F00267E6EB1007C6F77 /* Assets.xcassets */; };
 		1DBA8F04267E6EB1007C6F77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DBA8F02267E6EB1007C6F77 /* LaunchScreen.storyboard */; };
 		1DBA8F0F267E6EB1007C6F77 /* FotopediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8F0E267E6EB1007C6F77 /* FotopediaTests.swift */; };
@@ -38,8 +36,6 @@
 		1DBA8EF4267E6EB0007C6F77 /* Fotopedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fotopedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DBA8EF7267E6EB0007C6F77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DBA8EF9267E6EB0007C6F77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1DBA8EFB267E6EB0007C6F77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1DBA8EFE267E6EB0007C6F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1DBA8F00267E6EB1007C6F77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DBA8F03267E6EB1007C6F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DBA8F05267E6EB1007C6F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,13 +95,13 @@
 		1DBA8EF6267E6EB0007C6F77 /* Fotopedia */ = {
 			isa = PBXGroup;
 			children = (
-				1DBA8EF7267E6EB0007C6F77 /* AppDelegate.swift */,
-				1DBA8EF9267E6EB0007C6F77 /* SceneDelegate.swift */,
-				1DBA8EFB267E6EB0007C6F77 /* ViewController.swift */,
-				1DBA8EFD267E6EB0007C6F77 /* Main.storyboard */,
-				1DBA8F00267E6EB1007C6F77 /* Assets.xcassets */,
-				1DBA8F02267E6EB1007C6F77 /* LaunchScreen.storyboard */,
-				1DBA8F05267E6EB1007C6F77 /* Info.plist */,
+				1DBA8F40267E70E9007C6F77 /* Scenes */,
+				1DBA8F41267E70F5007C6F77 /* Entities */,
+				1DBA8F42267E7105007C6F77 /* Utilities */,
+				1DBA8F43267E711D007C6F77 /* Custom_Views */,
+				1DBA8F44267E7124007C6F77 /* Storyboards */,
+				1DBA8F45267E712E007C6F77 /* Resources */,
+				1DBA8F46267E7132007C6F77 /* Supporting_Files */,
 			);
 			path = Fotopedia;
 			sourceTree = "<group>";
@@ -126,6 +122,68 @@
 				1DBA8F1B267E6EB1007C6F77 /* Info.plist */,
 			);
 			path = FotopediaUITests;
+			sourceTree = "<group>";
+		};
+		1DBA8F40267E70E9007C6F77 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		1DBA8F41267E70F5007C6F77 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		1DBA8F42267E7105007C6F77 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1DBA8F43267E711D007C6F77 /* Custom_Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Custom_Views;
+			sourceTree = "<group>";
+		};
+		1DBA8F44267E7124007C6F77 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1DBA8F02267E6EB1007C6F77 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		1DBA8F45267E712E007C6F77 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1DBA8F47267E7165007C6F77 /* Xcode_Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1DBA8F46267E7132007C6F77 /* Supporting_Files */ = {
+			isa = PBXGroup;
+			children = (
+				1DBA8EF7267E6EB0007C6F77 /* AppDelegate.swift */,
+				1DBA8EF9267E6EB0007C6F77 /* SceneDelegate.swift */,
+				1DBA8F05267E6EB1007C6F77 /* Info.plist */,
+			);
+			path = Supporting_Files;
+			sourceTree = "<group>";
+		};
+		1DBA8F47267E7165007C6F77 /* Xcode_Assets */ = {
+			isa = PBXGroup;
+			children = (
+				1DBA8F00267E6EB1007C6F77 /* Assets.xcassets */,
+			);
+			path = Xcode_Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +291,6 @@
 			files = (
 				1DBA8F04267E6EB1007C6F77 /* LaunchScreen.storyboard in Resources */,
 				1DBA8F01267E6EB1007C6F77 /* Assets.xcassets in Resources */,
-				1DBA8EFF267E6EB0007C6F77 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +315,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DBA8EFC267E6EB0007C6F77 /* ViewController.swift in Sources */,
 				1DBA8EF8267E6EB0007C6F77 /* AppDelegate.swift in Sources */,
 				1DBA8EFA267E6EB0007C6F77 /* SceneDelegate.swift in Sources */,
 			);
@@ -296,14 +352,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1DBA8EFD267E6EB0007C6F77 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1DBA8EFE267E6EB0007C6F77 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1DBA8F02267E6EB1007C6F77 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -438,7 +486,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T44TZL3ZF6;
-				INFOPLIST_FILE = Fotopedia/Info.plist;
+				INFOPLIST_FILE = Fotopedia/Supporting_Files/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +505,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T44TZL3ZF6;
-				INFOPLIST_FILE = Fotopedia/Info.plist;
+				INFOPLIST_FILE = Fotopedia/Supporting_Files/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
