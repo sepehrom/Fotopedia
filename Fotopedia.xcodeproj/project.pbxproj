@@ -29,6 +29,14 @@
 		1DBA8FA6267E7CE9007C6F77 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8FA5267E7CE9007C6F77 /* ImageData.swift */; };
 		1DBA8FAC267E7F58007C6F77 /* ImageSearchResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8FAB267E7F58007C6F77 /* ImageSearchResponseParser.swift */; };
 		1DBA8FB4267E7F7F007C6F77 /* FlickrImageSearchResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8FB3267E7F7F007C6F77 /* FlickrImageSearchResponseParser.swift */; };
+		1DBA8FC0267E8D68007C6F77 /* ImageListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8FB8267E8D68007C6F77 /* ImageListPresenter.swift */; };
+		1DBA8FC1267E8D68007C6F77 /* ImageListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8FB9267E8D68007C6F77 /* ImageListRouter.swift */; };
+		1DBA8FC2267E8D68007C6F77 /* ImageListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DBA8FBA267E8D68007C6F77 /* ImageListViewController.storyboard */; };
+		1DBA8FC3267E8D68007C6F77 /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8FBB267E8D68007C6F77 /* ImageListViewController.swift */; };
+		1DBA8FC4267E8D68007C6F77 /* ImageListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8FBC267E8D68007C6F77 /* ImageListProtocols.swift */; };
+		1DBA8FC5267E8D68007C6F77 /* ImageListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8FBD267E8D68007C6F77 /* ImageListBuilder.swift */; };
+		1DBA8FC6267E8D68007C6F77 /* ImageListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8FBE267E8D68007C6F77 /* ImageListInteractor.swift */; };
+		1DBA8FC7267E8D68007C6F77 /* ImageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8FBF267E8D68007C6F77 /* ImageListView.swift */; };
 		637BB798B09B399B54CFD749 /* Pods_Fotopedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3FA71637E83656A93929F /* Pods_Fotopedia.framework */; };
 		B488600F6B30A509B1B1A26B /* Pods_FotopediaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D0F78250E1CFBC8DABBE85 /* Pods_FotopediaTests.framework */; };
 /* End PBXBuildFile section */
@@ -79,6 +87,14 @@
 		1DBA8FA5267E7CE9007C6F77 /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 		1DBA8FAB267E7F58007C6F77 /* ImageSearchResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchResponseParser.swift; sourceTree = "<group>"; };
 		1DBA8FB3267E7F7F007C6F77 /* FlickrImageSearchResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImageSearchResponseParser.swift; sourceTree = "<group>"; };
+		1DBA8FB8267E8D68007C6F77 /* ImageListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListPresenter.swift; sourceTree = "<group>"; };
+		1DBA8FB9267E8D68007C6F77 /* ImageListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListRouter.swift; sourceTree = "<group>"; };
+		1DBA8FBA267E8D68007C6F77 /* ImageListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageListViewController.storyboard; sourceTree = "<group>"; };
+		1DBA8FBB267E8D68007C6F77 /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
+		1DBA8FBC267E8D68007C6F77 /* ImageListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListProtocols.swift; sourceTree = "<group>"; };
+		1DBA8FBD267E8D68007C6F77 /* ImageListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListBuilder.swift; sourceTree = "<group>"; };
+		1DBA8FBE267E8D68007C6F77 /* ImageListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListInteractor.swift; sourceTree = "<group>"; };
+		1DBA8FBF267E8D68007C6F77 /* ImageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListView.swift; sourceTree = "<group>"; };
 		28D0F78250E1CFBC8DABBE85 /* Pods_FotopediaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FotopediaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3435C0724A1265835298081F /* Pods-FotopediaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FotopediaTests.release.xcconfig"; path = "Target Support Files/Pods-FotopediaTests/Pods-FotopediaTests.release.xcconfig"; sourceTree = "<group>"; };
 		364FFCC4C305DD869EC59564 /* Pods-Fotopedia-FotopediaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fotopedia-FotopediaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Fotopedia-FotopediaUITests/Pods-Fotopedia-FotopediaUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -189,7 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				1DBA8F5A267E7364007C6F77 /* Base_Scene */,
-				1DBA8F81267E7577007C6F77 /* Photo_Search */,
+				1DBA8F81267E7577007C6F77 /* Image_List */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -220,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				1DBA8F02267E6EB1007C6F77 /* LaunchScreen.storyboard */,
+				1DBA8FBA267E8D68007C6F77 /* ImageListViewController.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -264,11 +281,18 @@
 			path = Base_Scene;
 			sourceTree = "<group>";
 		};
-		1DBA8F81267E7577007C6F77 /* Photo_Search */ = {
+		1DBA8F81267E7577007C6F77 /* Image_List */ = {
 			isa = PBXGroup;
 			children = (
+				1DBA8FBD267E8D68007C6F77 /* ImageListBuilder.swift */,
+				1DBA8FBB267E8D68007C6F77 /* ImageListViewController.swift */,
+				1DBA8FBE267E8D68007C6F77 /* ImageListInteractor.swift */,
+				1DBA8FB8267E8D68007C6F77 /* ImageListPresenter.swift */,
+				1DBA8FBC267E8D68007C6F77 /* ImageListProtocols.swift */,
+				1DBA8FB9267E8D68007C6F77 /* ImageListRouter.swift */,
+				1DBA8FBF267E8D68007C6F77 /* ImageListView.swift */,
 			);
-			path = Photo_Search;
+			path = Image_List;
 			sourceTree = "<group>";
 		};
 		1DBA8F82267E7755007C6F77 /* Image_Loader */ = {
@@ -437,6 +461,7 @@
 			files = (
 				1DBA8F04267E6EB1007C6F77 /* LaunchScreen.storyboard in Resources */,
 				1DBA8F01267E6EB1007C6F77 /* Assets.xcassets in Resources */,
+				1DBA8FC2267E8D68007C6F77 /* ImageListViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,16 +590,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DBA8F9E267E7BFD007C6F77 /* MoyaImageNetworkManager.swift in Sources */,
+				1DBA8FC6267E8D68007C6F77 /* ImageListInteractor.swift in Sources */,
 				1DBA8F85267E778B007C6F77 /* ImageLoaderProtocols.swift in Sources */,
+				1DBA8FC1267E8D68007C6F77 /* ImageListRouter.swift in Sources */,
+				1DBA8FC0267E8D68007C6F77 /* ImageListPresenter.swift in Sources */,
 				1DBA8EF8267E6EB0007C6F77 /* AppDelegate.swift in Sources */,
+				1DBA8FC4267E8D68007C6F77 /* ImageListProtocols.swift in Sources */,
 				1DBA8F7D267E7413007C6F77 /* BaseRouter.swift in Sources */,
 				1DBA8F78267E740A007C6F77 /* BasePresenter.swift in Sources */,
 				1DBA8F64267E73A9007C6F77 /* BaseViewController.swift in Sources */,
 				1DBA8F99267E79A6007C6F77 /* MoyaFlickrAPIService.swift in Sources */,
 				1DBA8EFA267E6EB0007C6F77 /* SceneDelegate.swift in Sources */,
+				1DBA8FC3267E8D68007C6F77 /* ImageListViewController.swift in Sources */,
 				1DBA8FB4267E7F7F007C6F77 /* FlickrImageSearchResponseParser.swift in Sources */,
 				1DBA8FA6267E7CE9007C6F77 /* ImageData.swift in Sources */,
 				1DBA8F5C267E7389007C6F77 /* BaseBuilder.swift in Sources */,
+				1DBA8FC7267E8D68007C6F77 /* ImageListView.swift in Sources */,
+				1DBA8FC5267E8D68007C6F77 /* ImageListBuilder.swift in Sources */,
 				1DBA8F69267E73BC007C6F77 /* BaseSplitViewController.swift in Sources */,
 				1DBA8F8B267E77F3007C6F77 /* RemoteImageLoader.swift in Sources */,
 				1DBA8F73267E73D9007C6F77 /* BaseProtocols.swift in Sources */,
