@@ -1,0 +1,6 @@
+framework module Pods_Fotopedia {
+  umbrella header "Pods-Fotopedia-umbrella.h"
+
+  export *
+  module * { export * }
+}

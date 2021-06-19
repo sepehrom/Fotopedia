@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		033A5A88D6C0417BD8674642 /* Pods_Fotopedia_FotopediaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D9E6570C976C538E42538F /* Pods_Fotopedia_FotopediaUITests.framework */; };
 		1DBA8EF8267E6EB0007C6F77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8EF7267E6EB0007C6F77 /* AppDelegate.swift */; };
 		1DBA8EFA267E6EB0007C6F77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8EF9267E6EB0007C6F77 /* SceneDelegate.swift */; };
 		1DBA8F01267E6EB1007C6F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DBA8F00267E6EB1007C6F77 /* Assets.xcassets */; };
 		1DBA8F04267E6EB1007C6F77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DBA8F02267E6EB1007C6F77 /* LaunchScreen.storyboard */; };
 		1DBA8F0F267E6EB1007C6F77 /* FotopediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8F0E267E6EB1007C6F77 /* FotopediaTests.swift */; };
 		1DBA8F1A267E6EB1007C6F77 /* FotopediaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8F19267E6EB1007C6F77 /* FotopediaUITests.swift */; };
+		637BB798B09B399B54CFD749 /* Pods_Fotopedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3FA71637E83656A93929F /* Pods_Fotopedia.framework */; };
+		B488600F6B30A509B1B1A26B /* Pods_FotopediaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D0F78250E1CFBC8DABBE85 /* Pods_FotopediaTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09D9E6570C976C538E42538F /* Pods_Fotopedia_FotopediaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fotopedia_FotopediaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DBA8EF4267E6EB0007C6F77 /* Fotopedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fotopedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DBA8EF7267E6EB0007C6F77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DBA8EF9267E6EB0007C6F77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,14 @@
 		1DBA8F15267E6EB1007C6F77 /* FotopediaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FotopediaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DBA8F19267E6EB1007C6F77 /* FotopediaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotopediaUITests.swift; sourceTree = "<group>"; };
 		1DBA8F1B267E6EB1007C6F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28D0F78250E1CFBC8DABBE85 /* Pods_FotopediaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FotopediaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3435C0724A1265835298081F /* Pods-FotopediaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FotopediaTests.release.xcconfig"; path = "Target Support Files/Pods-FotopediaTests/Pods-FotopediaTests.release.xcconfig"; sourceTree = "<group>"; };
+		364FFCC4C305DD869EC59564 /* Pods-Fotopedia-FotopediaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fotopedia-FotopediaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Fotopedia-FotopediaUITests/Pods-Fotopedia-FotopediaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		48F3FA71637E83656A93929F /* Pods_Fotopedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fotopedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A917B982F67A63EAB62E2FC /* Pods-Fotopedia-FotopediaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fotopedia-FotopediaUITests.release.xcconfig"; path = "Target Support Files/Pods-Fotopedia-FotopediaUITests/Pods-Fotopedia-FotopediaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		94AB4011C054592FDF5A557C /* Pods-Fotopedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fotopedia.release.xcconfig"; path = "Target Support Files/Pods-Fotopedia/Pods-Fotopedia.release.xcconfig"; sourceTree = "<group>"; };
+		9BC7E267D0DD53EA3EA18516 /* Pods-FotopediaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FotopediaTests.debug.xcconfig"; path = "Target Support Files/Pods-FotopediaTests/Pods-FotopediaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B6D1B74DCAA477F98FF2E72A /* Pods-Fotopedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fotopedia.debug.xcconfig"; path = "Target Support Files/Pods-Fotopedia/Pods-Fotopedia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				637BB798B09B399B54CFD749 /* Pods_Fotopedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B488600F6B30A509B1B1A26B /* Pods_FotopediaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,12 +80,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				033A5A88D6C0417BD8674642 /* Pods_Fotopedia_FotopediaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17AD9ADC9BAB27F2B0A51B1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B6D1B74DCAA477F98FF2E72A /* Pods-Fotopedia.debug.xcconfig */,
+				94AB4011C054592FDF5A557C /* Pods-Fotopedia.release.xcconfig */,
+				364FFCC4C305DD869EC59564 /* Pods-Fotopedia-FotopediaUITests.debug.xcconfig */,
+				5A917B982F67A63EAB62E2FC /* Pods-Fotopedia-FotopediaUITests.release.xcconfig */,
+				9BC7E267D0DD53EA3EA18516 /* Pods-FotopediaTests.debug.xcconfig */,
+				3435C0724A1265835298081F /* Pods-FotopediaTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		1DBA8EEB267E6EB0007C6F77 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +108,8 @@
 				1DBA8F0D267E6EB1007C6F77 /* FotopediaTests */,
 				1DBA8F18267E6EB1007C6F77 /* FotopediaUITests */,
 				1DBA8EF5267E6EB0007C6F77 /* Products */,
+				17AD9ADC9BAB27F2B0A51B1A /* Pods */,
+				D239612BCAEA790B205D7D4D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -186,6 +217,16 @@
 			path = Xcode_Assets;
 			sourceTree = "<group>";
 		};
+		D239612BCAEA790B205D7D4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48F3FA71637E83656A93929F /* Pods_Fotopedia.framework */,
+				09D9E6570C976C538E42538F /* Pods_Fotopedia_FotopediaUITests.framework */,
+				28D0F78250E1CFBC8DABBE85 /* Pods_FotopediaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -193,9 +234,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DBA8F1E267E6EB1007C6F77 /* Build configuration list for PBXNativeTarget "Fotopedia" */;
 			buildPhases = (
+				CE8A55057EDC9DD8455A5B5A /* [CP] Check Pods Manifest.lock */,
 				1DBA8EF0267E6EB0007C6F77 /* Sources */,
 				1DBA8EF1267E6EB0007C6F77 /* Frameworks */,
 				1DBA8EF2267E6EB0007C6F77 /* Resources */,
+				A95C429631904803191CA723 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -210,6 +253,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DBA8F21267E6EB1007C6F77 /* Build configuration list for PBXNativeTarget "FotopediaTests" */;
 			buildPhases = (
+				72EFD39D97AD464C50511810 /* [CP] Check Pods Manifest.lock */,
 				1DBA8F06267E6EB1007C6F77 /* Sources */,
 				1DBA8F07267E6EB1007C6F77 /* Frameworks */,
 				1DBA8F08267E6EB1007C6F77 /* Resources */,
@@ -228,9 +272,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DBA8F24267E6EB1007C6F77 /* Build configuration list for PBXNativeTarget "FotopediaUITests" */;
 			buildPhases = (
+				B5CF9456153FDFE21E618642 /* [CP] Check Pods Manifest.lock */,
 				1DBA8F11267E6EB1007C6F77 /* Sources */,
 				1DBA8F12267E6EB1007C6F77 /* Frameworks */,
 				1DBA8F13267E6EB1007C6F77 /* Resources */,
+				65956ACA104C2BD14ED1BD53 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,6 +355,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		65956ACA104C2BD14ED1BD53 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fotopedia-FotopediaUITests/Pods-Fotopedia-FotopediaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fotopedia-FotopediaUITests/Pods-Fotopedia-FotopediaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fotopedia-FotopediaUITests/Pods-Fotopedia-FotopediaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72EFD39D97AD464C50511810 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FotopediaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A95C429631904803191CA723 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fotopedia/Pods-Fotopedia-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fotopedia/Pods-Fotopedia-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fotopedia/Pods-Fotopedia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5CF9456153FDFE21E618642 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fotopedia-FotopediaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE8A55057EDC9DD8455A5B5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fotopedia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1DBA8EF0267E6EB0007C6F77 /* Sources */ = {
@@ -481,6 +630,7 @@
 		};
 		1DBA8F1F267E6EB1007C6F77 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6D1B74DCAA477F98FF2E72A /* Pods-Fotopedia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -500,6 +650,7 @@
 		};
 		1DBA8F20267E6EB1007C6F77 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94AB4011C054592FDF5A557C /* Pods-Fotopedia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -519,6 +670,7 @@
 		};
 		1DBA8F22267E6EB1007C6F77 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BC7E267D0DD53EA3EA18516 /* Pods-FotopediaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -541,6 +693,7 @@
 		};
 		1DBA8F23267E6EB1007C6F77 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3435C0724A1265835298081F /* Pods-FotopediaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -563,6 +716,7 @@
 		};
 		1DBA8F25267E6EB1007C6F77 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 364FFCC4C305DD869EC59564 /* Pods-Fotopedia-FotopediaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -583,6 +737,7 @@
 		};
 		1DBA8F26267E6EB1007C6F77 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A917B982F67A63EAB62E2FC /* Pods-Fotopedia-FotopediaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

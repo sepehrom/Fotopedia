@@ -1,0 +1,6 @@
+framework module Pods_FotopediaTests {
+  umbrella header "Pods-FotopediaTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
