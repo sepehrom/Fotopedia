@@ -1,5 +1,5 @@
 //
-//  ImageListInteractor.swift
+//  ImageSearchDetailView.swift
 //  Fotopedia
 //
 //  Created by Amir Sepehrom on 6/20/21.
@@ -12,16 +12,13 @@
 
 import UIKit
 
-class ImageListInteractor: BaseInteractor {
+class ImageSearchDetailView: UIView {
     // MARK: - Properties
-    var presenter: ImageListPresenterProtocol!
-    var router: ImageListRouterProtocol!
-    
-    // MARK: - Methods
-}
 
-extension ImageListInteractor: ImageListInteractorProtocol {
-    func viewDidLoad() {
-        
+    // MARK: - Methods
+    // MARK: NSObject
+    override func awakeFromNib() {
+        super.awakeFromNib()
+
     }
 }

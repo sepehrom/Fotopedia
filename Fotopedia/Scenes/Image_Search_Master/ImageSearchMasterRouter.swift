@@ -1,5 +1,5 @@
 //
-//  ImageListProtocols.swift
+//  ImageSearchMasterRouter.swift
 //  Fotopedia
 //
 //  Created by Amir Sepehrom on 6/20/21.
@@ -12,14 +12,13 @@
 
 import UIKit
 
-protocol ImageListInteractorProtocol: BaseInteractorProtocol {
+class ImageSearchMasterRouter: BaseRouter {
+    // MARK: - Properties
+    weak var viewControllerProtocol: ImageSearchMasterViewControllerProtocol!
+    
+    // MARK: - Methods
 }
 
-protocol ImageListPresenterProtocol: BasePresenterProtocol {
-}
+extension ImageSearchMasterRouter: ImageSearchMasterRouterProtocol {
 
-protocol ImageListViewControllerProtocol: BaseViewControllerProtocol{
-}
-
-protocol ImageListRouterProtocol: BaseRouterProtocol {
 }

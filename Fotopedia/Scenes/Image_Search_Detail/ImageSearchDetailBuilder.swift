@@ -1,5 +1,5 @@
 //
-//  ImageListBuilder.swift
+//  ImageSearchDetailBuilder.swift
 //  Fotopedia
 //
 //  Created by Amir Sepehrom on 6/20/21.
@@ -12,15 +12,16 @@
 
 import UIKit
 
-class ImageListBuilder: BaseBuilder {
+class ImageSearchDetailBuilder: BaseBuilder {
     // MARK: - Properties
     
     // MARK: - Methods
-    class func build() -> (ImageListViewController, ImageListInteractor) {
-        let viewController: ImageListViewController = UIStoryboard(name: "ImageListViewController", bundle: Bundle.main).instantiateInitialViewController() as! ImageListViewController
-        let interactor = ImageListInteractor()
-        let presenter = ImageListPresenter()
-        let router = ImageListRouter()
+    class func build() -> (ImageSearchDetailViewController, ImageSearchDetailInteractor) {
+        let viewController: ImageSearchDetailViewController =
+			UIStoryboard(name: "ImageSearchDetailViewController", bundle: Bundle.main).instantiateInitialViewController() as! ImageSearchDetailViewController
+        let interactor = ImageSearchDetailInteractor()
+        let presenter = ImageSearchDetailPresenter()
+        let router = ImageSearchDetailRouter()
         
         viewController.interactor = interactor
         

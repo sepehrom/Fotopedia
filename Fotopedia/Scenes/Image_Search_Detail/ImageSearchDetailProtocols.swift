@@ -1,5 +1,5 @@
 //
-//  ImageListPresenter.swift
+//  ImageSearchDetailProtocols.swift
 //  Fotopedia
 //
 //  Created by Amir Sepehrom on 6/20/21.
@@ -12,12 +12,14 @@
 
 import UIKit
 
-class ImageListPresenter: BasePresenter {
-    // MARK: - Properties
-    weak var viewController: ImageListViewControllerProtocol!
-    
-    // MARK: - Methods
+protocol ImageSearchDetailInteractorProtocol: BaseInteractorProtocol {
 }
 
-extension ImageListPresenter: ImageListPresenterProtocol {
+protocol ImageSearchDetailPresenterProtocol: BasePresenterProtocol {
+}
+
+protocol ImageSearchDetailViewControllerProtocol: BaseViewControllerProtocol{
+}
+
+protocol ImageSearchDetailRouterProtocol: BaseRouterProtocol {
 }

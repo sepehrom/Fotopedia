@@ -1,5 +1,5 @@
 //
-//  ImageListViewController.swift
+//  ImageSearchMasterViewController.swift
 //  Fotopedia
 //
 //  Created by Amir Sepehrom on 6/20/21.
@@ -12,18 +12,18 @@
 
 import UIKit
 
-class ImageListViewController: BaseViewController {
+class ImageSearchMasterViewController: BaseViewController {
     // MARK: - Properties
-    var imageListInteractor: ImageListInteractorProtocol! {
+    var imageSearchMasterInteractor: ImageSearchMasterInteractorProtocol! {
         get {
-            return interactor as? ImageListInteractorProtocol
+            return interactor as? ImageSearchMasterInteractorProtocol
         }
         set {
             interactor = newValue
         }
     }
-    private var imageListView: ImageListView {
-        return view as! ImageListView
+    private var imageSearchMasterView: ImageSearchMasterView {
+        return view as! ImageSearchMasterView
     }
     
     // MARK: - Methods
@@ -34,6 +34,6 @@ class ImageListViewController: BaseViewController {
     }
 }
 
-extension ImageListViewController: ImageListViewControllerProtocol {
+extension ImageSearchMasterViewController: ImageSearchMasterViewControllerProtocol {
 
 }

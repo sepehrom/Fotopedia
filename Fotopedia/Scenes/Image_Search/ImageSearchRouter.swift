@@ -1,5 +1,5 @@
 //
-//  ImageListView.swift
+//  ImageSearchRouter.swift
 //  Fotopedia
 //
 //  Created by Amir Sepehrom on 6/20/21.
@@ -12,13 +12,14 @@
 
 import UIKit
 
-class ImageListView: UIView {
+class ImageSearchRouter: BaseRouter {
     // MARK: - Properties
-
+    weak var viewControllerProtocol: ImageSearchViewControllerProtocol!
+    
     // MARK: - Methods
-    // MARK: NSObject
-    override func awakeFromNib() {
-        super.awakeFromNib()
+}
 
-    }
+// MARK: - ImageSearchRouterProtocol
+extension ImageSearchRouter: ImageSearchRouterProtocol {
+
 }

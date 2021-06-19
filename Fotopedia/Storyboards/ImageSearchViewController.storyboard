@@ -10,8 +10,8 @@
         <!--scene Name View Controller-->
         <scene sceneID="JeI-ga-wnn">
             <objects>
-                <viewController id="wAQ-Lg-nkc" customClass="ImageListViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4xN-48-H36" customClass="ImageListView" customModuleProvider="target">
+                <viewController id="wAQ-Lg-nkc" customClass="ImageSearchViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4xN-48-H36" customClass="ImageSearchView" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="9gO-lw-5Q7"/>
