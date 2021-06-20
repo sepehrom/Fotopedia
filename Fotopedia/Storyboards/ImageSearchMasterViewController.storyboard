@@ -4,23 +4,82 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--scene Name View Controller-->
+        <!--Image Search Master View Controller-->
         <scene sceneID="JeI-ga-wnn">
             <objects>
-                <viewController id="wAQ-Lg-nkc" customClass="ImageSearchMasterViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4xN-48-H36" customClass="ImageSearchMasterView" customModuleProvider="target">
+                <viewController id="wAQ-Lg-nkc" customClass="ImageSearchMasterViewController" customModule="Fotopedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4xN-48-H36" customClass="ImageSearchMasterView" customModule="Fotopedia" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dEW-cu-iWO">
+                                <rect key="frame" x="8" y="64" width="359" height="611"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="joy-pF-Xsd">
+                                    <size key="itemSize" width="186" height="182"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="bG8-s3-e5t" customClass="ImageCollectionViewCell" customModule="Fotopedia" customModuleProvider="target">
+                                        <rect key="frame" x="86.5" y="0.0" width="186" height="182"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Hax-Mr-yCm">
+                                            <rect key="frame" x="0.0" y="0.0" width="186" height="182"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="thb-ch-MGU">
+                                                    <rect key="frame" x="8" y="8" width="170" height="166"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="thb-ch-MGU" firstAttribute="top" secondItem="Hax-Mr-yCm" secondAttribute="top" constant="8" id="SCt-jP-KHe"/>
+                                                <constraint firstItem="thb-ch-MGU" firstAttribute="leading" secondItem="Hax-Mr-yCm" secondAttribute="leading" constant="8" id="T80-KU-Wma"/>
+                                                <constraint firstAttribute="trailing" secondItem="thb-ch-MGU" secondAttribute="trailing" constant="8" id="rA4-TE-x4M"/>
+                                                <constraint firstAttribute="bottom" secondItem="thb-ch-MGU" secondAttribute="bottom" constant="8" id="w6d-tP-kEd"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageView" destination="thb-ch-MGU" id="JBb-W2-gTz"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="pCA-ha-ENa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="9gO-lw-5Q7"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pCA-ha-ENa" firstAttribute="trailing" secondItem="9gO-lw-5Q7" secondAttribute="trailing" id="012-Re-lqT"/>
+                            <constraint firstItem="pCA-ha-ENa" firstAttribute="leading" secondItem="9gO-lw-5Q7" secondAttribute="leading" id="94E-QQ-4oC"/>
+                            <constraint firstItem="dEW-cu-iWO" firstAttribute="leading" secondItem="9gO-lw-5Q7" secondAttribute="leading" constant="8" id="Agk-mX-nNE"/>
+                            <constraint firstItem="dEW-cu-iWO" firstAttribute="trailing" secondItem="9gO-lw-5Q7" secondAttribute="trailing" constant="-8" id="M9z-N1-JdY"/>
+                            <constraint firstItem="dEW-cu-iWO" firstAttribute="bottom" secondItem="9gO-lw-5Q7" secondAttribute="bottom" constant="8" id="VfH-lz-Bh3"/>
+                            <constraint firstItem="dEW-cu-iWO" firstAttribute="top" secondItem="pCA-ha-ENa" secondAttribute="bottom" constant="8" id="oLp-sc-xaT"/>
+                            <constraint firstItem="pCA-ha-ENa" firstAttribute="top" secondItem="9gO-lw-5Q7" secondAttribute="top" id="zBi-9f-94J"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="collectionView" destination="dEW-cu-iWO" id="rG4-0L-4cy"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hko-7o-YW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-207" y="-39"/>
+            <point key="canvasLocation" x="-207.19999999999999" y="-39.130434782608695"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

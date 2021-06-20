@@ -14,7 +14,8 @@ import UIKit
 
 class ImageSearchMasterView: UIView {
     // MARK: - Properties
-
+	@IBOutlet weak var collectionView: UICollectionView!
+	
     // MARK: - Methods
     // MARK: NSObject
     override func awakeFromNib() {
