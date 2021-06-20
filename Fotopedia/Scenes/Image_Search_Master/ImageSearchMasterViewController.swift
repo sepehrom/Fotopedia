@@ -68,7 +68,6 @@ class ImageSearchMasterViewController: BaseViewController {
 extension ImageSearchMasterViewController: ImageSearchMasterViewControllerProtocol {
 	func updateImagesDataSource(newDataSource: [String]) {
 		self.imagesDataSource = newDataSource
-		self.imageSearchMasterView.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
 		self.imageSearchMasterView.collectionView.reloadData()
 	}
 	
@@ -86,7 +85,8 @@ extension ImageSearchMasterViewController: ImageSearchMasterViewControllerProtoc
 extension ImageSearchMasterViewController: UISearchBarDelegate {
 	func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
 		searchBar.resignFirstResponder()
-		imageSearchMasterInteractor.didRequestToSearchForImages(searchTerm: searchBar.text!)
+		imageSearchMasterInteractor.didRequestCleanSearchForImages(searchTerm: searchBar.text!)
+		self.imageSearchMasterView.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
 	}
 }
 
@@ -137,5 +137,12 @@ extension ImageSearchMasterViewController: UICollectionViewDelegate {
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		collectionView.deselectItem(at: indexPath, animated: true)
 		
+	}
+	
+	func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+		let bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height
+		if (bottomEdge >= scrollView.contentSize.height) {
+			imageSearchMasterInteractor.didScrollToTheEndOfSearchResult()
+		}
 	}
 }

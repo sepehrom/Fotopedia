@@ -13,7 +13,8 @@
 import UIKit
 
 protocol ImageSearchMasterInteractorProtocol: BaseInteractorProtocol {
-	func didRequestToSearchForImages(searchTerm: String)
+	func didRequestCleanSearchForImages(searchTerm: String)
+	func didScrollToTheEndOfSearchResult()
 }
 
 protocol ImageSearchMasterPresenterProtocol: BasePresenterProtocol {

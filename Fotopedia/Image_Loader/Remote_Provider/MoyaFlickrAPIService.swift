@@ -16,7 +16,7 @@ extension FlickrAPIService: TargetType {
 	
 	var path: String {
 		switch self {
-		case .photosSearch(_):
+		case .photosSearch(_, _):
 			return "/services/rest/"
 		}
 	}
@@ -37,12 +37,14 @@ extension FlickrAPIService: TargetType {
 	
 	var task: Task {
 		switch self {
-		case let .photosSearch(searchTerm):
+		case let .photosSearch(searchTerm, page):
 			return .requestParameters(parameters: ["method":"flickr.photos.search",
 												   "api_key":"11c40ef31e4961acf4f98c8ff4e945d7",
 												   "format":"json",
 												   "nojsoncallback": 1,
 												   "sort":"relevance",
+												   "per_page": 100,
+												   "page": page,
 												   "text": searchTerm],
 									  encoding: URLEncoding.queryString)
 		}

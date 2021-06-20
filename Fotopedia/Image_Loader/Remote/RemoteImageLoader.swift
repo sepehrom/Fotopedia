@@ -18,9 +18,10 @@ class RemoteImageLoader: ImageLoader {
 	}
 	
 	func loadImages(searchTerm: String,
+					page: Int,
 					successCallback: @escaping ImageSearchSuccessResponseHandler,
 					failureCallback: @escaping ImageSearchFailureResponseHandler) {
-		networkManager.fetchImagesFromFlickr(service: .photosSearch(searchTerm: searchTerm),
+		networkManager.fetchImagesFromFlickr(service: .photosSearch(searchTerm: searchTerm, page: page),
 											 successCallback: { (imageDataArray) in
 												successCallback(imageDataArray)
 											 }, failureCallback: { (error) in

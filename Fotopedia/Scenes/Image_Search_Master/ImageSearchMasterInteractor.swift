@@ -18,6 +18,9 @@ class ImageSearchMasterInteractor: BaseInteractor {
     var router: ImageSearchMasterRouterProtocol!
 	
 	var imageLoader: ImageLoader?
+	var lastSearchTerm: String = ""
+	var lastFetchedPageNumber: Int = 1
+	var currentImageDataArray: [ImageData] = []
     
     // MARK: - Methods
 	private override init() {}
@@ -27,15 +30,35 @@ class ImageSearchMasterInteractor: BaseInteractor {
 }
 
 extension ImageSearchMasterInteractor: ImageSearchMasterInteractorProtocol {
-	func didRequestToSearchForImages(searchTerm: String) {
+	func didRequestCleanSearchForImages(searchTerm: String) {
+		self.lastSearchTerm = searchTerm
+		self.lastFetchedPageNumber = 0
+		self.currentImageDataArray = []
 		guard searchTerm != "" else {
 			self.presenter.presentSearchInstructions()
 			return
 		}
-		self.presenter.presentLoadingState()
+		continueToSearchForImages(searchTerm: searchTerm)
+	}
+	
+	func didScrollToTheEndOfSearchResult() {
+		continueToSearchForImages(searchTerm: self.lastSearchTerm)
+	}
+	
+	func continueToSearchForImages(searchTerm: String) {
+		if (lastFetchedPageNumber == 0) {
+			self.presenter.presentLoadingState()
+		}
 		imageLoader!.loadImages(searchTerm: searchTerm,
+								page: lastFetchedPageNumber+1,
 								successCallback: { imageDataArray in
-									self.presenter.presentImages(imagesDataArray: imageDataArray)
+									if (self.lastFetchedPageNumber == 0) {
+										self.currentImageDataArray = imageDataArray
+									} else {
+										self.currentImageDataArray.append(contentsOf: imageDataArray)
+									}
+									self.lastFetchedPageNumber += 1
+									self.presenter.presentImages(imagesDataArray: self.currentImageDataArray)
 								}, failureCallback: { error in
 									self.presenter.presentServerError(errorMessage: error.localizedDescription)
 								})

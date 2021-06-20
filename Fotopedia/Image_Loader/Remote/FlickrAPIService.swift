@@ -9,5 +9,5 @@
 import Foundation
 
 enum FlickrAPIService {
-	case photosSearch(searchTerm: String)
+	case photosSearch(searchTerm: String, page: Int)
 }
