@@ -19,7 +19,7 @@ class ImageSearchMasterBuilder: BaseBuilder {
     class func build() -> (ImageSearchMasterViewController, ImageSearchMasterInteractor) {
         let viewController: ImageSearchMasterViewController =
 			UIStoryboard(name: "ImageSearchMasterViewController", bundle: Bundle.main).instantiateInitialViewController() as! ImageSearchMasterViewController
-        let interactor = ImageSearchMasterInteractor()
+		let interactor = ImageSearchMasterInteractor(imageLoader: RemoteImageLoader(networkManager: MoyaImageNetworkManager(responseParser: FlickrImageSearchResponseParser())))
         let presenter = ImageSearchMasterPresenter()
         let router = ImageSearchMasterRouter()
         

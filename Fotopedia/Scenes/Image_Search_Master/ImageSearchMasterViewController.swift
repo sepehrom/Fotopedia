@@ -13,8 +13,31 @@
 import UIKit
 import Kingfisher
 
+enum ImageListState {
+	case noValidSearchResult
+	case searchInProgress
+	case displayingResult
+}
+
 class ImageSearchMasterViewController: BaseViewController {
     // MARK: - Properties
+	var currentImageListState: ImageListState = .noValidSearchResult {
+		didSet {
+			self.imageSearchMasterView.loadingIndicator.isHidden = (currentImageListState != .searchInProgress)
+			self.imageSearchMasterView.emptyStateView.isHidden = (currentImageListState != .noValidSearchResult)
+			self.imageSearchMasterView.collectionView.isHidden = (currentImageListState != .displayingResult)
+		}
+	}
+	var currentEmptyStateReason: String = "" {
+		didSet {
+			self.imageSearchMasterView.emptyStateReasonLabel.text = currentEmptyStateReason
+		}
+	}
+	var currentEmptyStateImage: UIImage = UIImage(named: "imageIcon")! {
+		didSet {
+			self.imageSearchMasterView.emptyStateReasonImage.image = currentEmptyStateImage
+		}
+	}
 	var imagesDataSource: [String] = []
     var imageSearchMasterInteractor: ImageSearchMasterInteractorProtocol! {
         get {
@@ -24,7 +47,7 @@ class ImageSearchMasterViewController: BaseViewController {
             interactor = newValue
         }
     }
-    private var imageSearchMasterView: ImageSearchMasterView {
+	private var imageSearchMasterView: ImageSearchMasterView {
         return view as! ImageSearchMasterView
     }
     
@@ -35,8 +58,38 @@ class ImageSearchMasterViewController: BaseViewController {
         super.viewDidLoad()
 		imageSearchMasterView.collectionView.dataSource = self
 		imageSearchMasterView.collectionView.delegate = self
+		
+		imageSearchMasterView.searchBar.delegate = self
+		imageSearchMasterView.searchBar.placeholder = "Search for images..."
 	}
 }
+
+// MARK: - ImageSearchMasterViewControllerProtocol
+extension ImageSearchMasterViewController: ImageSearchMasterViewControllerProtocol {
+	func updateImagesDataSource(newDataSource: [String]) {
+		self.imagesDataSource = newDataSource
+		self.imageSearchMasterView.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+		self.imageSearchMasterView.collectionView.reloadData()
+	}
+	
+	func updateEmptyStateView(emptyStateReason: String, emptyStateImage: UIImage) {
+		self.currentEmptyStateReason = emptyStateReason
+		self.currentEmptyStateImage = emptyStateImage
+	}
+	
+	func updateLayoutState(newState: ImageListState) {
+		self.currentImageListState = newState
+	}
+}
+
+// MARK: - UISearchBarDelegate
+extension ImageSearchMasterViewController: UISearchBarDelegate {
+	func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+		searchBar.resignFirstResponder()
+		imageSearchMasterInteractor.didRequestToSearchForImages(searchTerm: searchBar.text!)
+	}
+}
+
 
 // MARK: - UICollectionViewDataSource
 extension ImageSearchMasterViewController: UICollectionViewDataSource {
@@ -47,7 +100,7 @@ extension ImageSearchMasterViewController: UICollectionViewDataSource {
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.reuseIdentifier, for: indexPath) as! ImageCollectionViewCell
-		cell.imageView.kf.setImage(with: URL(string: self.imagesDataSource[indexPath.row]))
+		cell.imageView.kf.setImage(with: URL(string: self.imagesDataSource[indexPath.row]), placeholder: UIImage(named: "imagePlaceholder"))
 		return cell
 	}
 }
@@ -85,9 +138,4 @@ extension ImageSearchMasterViewController: UICollectionViewDelegate {
 		collectionView.deselectItem(at: indexPath, animated: true)
 		
 	}
-}
-
-// MARK: - ImageSearchMasterViewControllerProtocol
-extension ImageSearchMasterViewController: ImageSearchMasterViewControllerProtocol {
-
 }

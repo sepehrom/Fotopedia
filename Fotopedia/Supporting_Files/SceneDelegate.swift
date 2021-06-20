@@ -16,9 +16,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		if let windowScene = scene as? UIWindowScene {
 			let window = UIWindow(windowScene: windowScene)
 			
-			let (imageSearchVC, imageSearchInteractor) = ImageSearchBuilder.build()
-			let (imageSearchMasterVC, imageSearchMasterInteractor) = ImageSearchMasterBuilder.build()
-			let (imageSearchDetailVC, imageSearchDetailInteractor) = ImageSearchDetailBuilder.build()
+			let (imageSearchVC, _) = ImageSearchBuilder.build()
+			let (imageSearchMasterVC, _) = ImageSearchMasterBuilder.build()
+			let (imageSearchDetailVC, _) = ImageSearchDetailBuilder.build()
 			
 			imageSearchVC.setViewController(UINavigationController(rootViewController: imageSearchMasterVC), for: .primary)
 			imageSearchVC.setViewController(UINavigationController(rootViewController: imageSearchDetailVC), for: .secondary)

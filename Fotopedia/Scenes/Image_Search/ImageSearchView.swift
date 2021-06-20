@@ -19,6 +19,5 @@ class ImageSearchView: UIView {
     // MARK: NSObject
     override func awakeFromNib() {
         super.awakeFromNib()
-
     }
 }

@@ -13,12 +13,20 @@
 import UIKit
 
 protocol ImageSearchMasterInteractorProtocol: BaseInteractorProtocol {
+	func didRequestToSearchForImages(searchTerm: String)
 }
 
 protocol ImageSearchMasterPresenterProtocol: BasePresenterProtocol {
+	func presentImages(imagesDataArray: [ImageData])
+	func presentServerError(errorMessage: String)
+	func presentSearchInstructions()
+	func presentLoadingState()
 }
 
 protocol ImageSearchMasterViewControllerProtocol: BaseViewControllerProtocol{
+	func updateImagesDataSource(newDataSource: [String])
+	func updateEmptyStateView(emptyStateReason: String, emptyStateImage: UIImage)
+	func updateLayoutState(newState: ImageListState)
 }
 
 protocol ImageSearchMasterRouterProtocol: BaseRouterProtocol {

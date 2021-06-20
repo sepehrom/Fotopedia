@@ -15,11 +15,23 @@ import UIKit
 class ImageSearchMasterView: UIView {
     // MARK: - Properties
 	@IBOutlet weak var collectionView: UICollectionView!
+	@IBOutlet weak var searchBar: UISearchBar!
+	@IBOutlet weak var emptyStateView: UIView!
+	@IBOutlet weak var emptyStateReasonImage: UIImageView!
+	@IBOutlet weak var emptyStateReasonLabel: UILabel!
+	@IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
 	
     // MARK: - Methods
     // MARK: NSObject
     override func awakeFromNib() {
         super.awakeFromNib()
-
+		self.backgroundColor = UIColor.systemBackground
+		
+		self.emptyStateReasonLabel.numberOfLines = 0
+		self.emptyStateReasonLabel.textAlignment = .center
+		self.emptyStateReasonImage.backgroundColor = .clear
+		
+		self.collectionView.keyboardDismissMode = .onDrag
+		self.collectionView.backgroundColor = UIColor.systemBackground
     }
 }

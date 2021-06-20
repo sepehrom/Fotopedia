@@ -8,10 +8,8 @@
 
 import Foundation
 
-typealias ImageSearchSuccessResponseHandler = ([ImageData]) -> Void
-typealias ImageSearchFailureResponseHandler = (Error) -> Void
-
 class RemoteImageLoader: ImageLoader {
+	
 	// MARK: - Properties
 	private let networkManager: ImageNetworkManager
 	
@@ -19,12 +17,14 @@ class RemoteImageLoader: ImageLoader {
 		self.networkManager = networkManager
 	}
 	
-	func loadImages(searchTerm: String) {
+	func loadImages(searchTerm: String,
+					successCallback: @escaping ImageSearchSuccessResponseHandler,
+					failureCallback: @escaping ImageSearchFailureResponseHandler) {
 		networkManager.fetchImagesFromFlickr(service: .photosSearch(searchTerm: searchTerm),
 											 successCallback: { (imageDataArray) in
-												
+												successCallback(imageDataArray)
 											 }, failureCallback: { (error) in
-												
+												failureCallback(error)
 											 })
 	}
 }

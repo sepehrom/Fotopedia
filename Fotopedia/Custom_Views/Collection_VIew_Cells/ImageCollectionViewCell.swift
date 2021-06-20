@@ -14,7 +14,10 @@ class ImageCollectionViewCell: UICollectionViewCell {
 	
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		self.imageView.layer.cornerRadius = 16
+		self.imageView.layer.cornerRadius = 8
 		self.imageView.layer.masksToBounds = true
+		self.imageView.contentMode = .scaleAspectFill
+		self.imageView.layer.borderWidth = 4.0
+		self.imageView.layer.borderColor = UIColor.black.cgColor
 	}
 }

@@ -17,7 +17,40 @@ class ImageSearchMasterPresenter: BasePresenter {
     weak var viewController: ImageSearchMasterViewControllerProtocol!
     
     // MARK: - Methods
+	func constructImageURLFromImageData(metadata: ImageData) -> String {
+		return "http://farm\(metadata.farm).static.flickr.com/\(metadata.server)/\(metadata.identifier)_\(metadata.secret).jpg"
+	}
 }
 
 extension ImageSearchMasterPresenter: ImageSearchMasterPresenterProtocol {
+	func presentSearchInstructions() {
+		viewController.updateEmptyStateView(emptyStateReason: "Use the search bar to find\nthe images you want.",
+											emptyStateImage: UIImage(named: "imageIcon")!)
+		viewController.updateLayoutState(newState: .noValidSearchResult)
+	}
+	
+	func presentServerError(errorMessage: String) {
+		viewController.updateEmptyStateView(emptyStateReason: errorMessage,
+											emptyStateImage: UIImage(named: "serverError")!)
+		viewController.updateLayoutState(newState: .noValidSearchResult)
+	}
+	
+	func presentLoadingState() {
+		viewController.updateLayoutState(newState: .searchInProgress)
+	}
+	
+	func presentImages(imagesDataArray: [ImageData]) {
+		if (imagesDataArray.count == 0) {
+			viewController.updateEmptyStateView(emptyStateReason: "No images have been found.\nTry another search term.",
+												emptyStateImage: UIImage(named: "noSearchResult")!)
+			viewController.updateLayoutState(newState: .noValidSearchResult)
+		} else {
+			var imageURLs: [String] = []
+			imagesDataArray.forEach { (imageData) in
+				imageURLs.append(self.constructImageURLFromImageData(metadata: imageData))
+			}
+			viewController.updateImagesDataSource(newDataSource: imageURLs)
+			viewController.updateLayoutState(newState: .displayingResult)
+		}
+	}
 }

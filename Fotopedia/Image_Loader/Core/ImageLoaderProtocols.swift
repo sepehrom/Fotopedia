@@ -8,8 +8,13 @@
 
 import Foundation
 
+typealias ImageSearchSuccessResponseHandler = ([ImageData]) -> Void
+typealias ImageSearchFailureResponseHandler = (Error) -> Void
+
 protocol ImageLoader {
-	func loadImages(searchTerm: String)
+	func loadImages(searchTerm: String,
+					successCallback: @escaping ImageSearchSuccessResponseHandler,
+					failureCallback: @escaping ImageSearchFailureResponseHandler)
 }
 
 protocol ImageNetworkManager {
