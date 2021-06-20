@@ -20,4 +20,7 @@ class ImageSearchDetailPresenter: BasePresenter {
 }
 
 extension ImageSearchDetailPresenter: ImageSearchDetailPresenterProtocol {
+	func presentImage(_ imageURL: String) {
+		viewController.updateFullImage(imageURL)
+	}
 }

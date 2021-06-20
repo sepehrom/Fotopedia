@@ -35,5 +35,7 @@ class ImageSearchDetailViewController: BaseViewController {
 }
 
 extension ImageSearchDetailViewController: ImageSearchDetailViewControllerProtocol {
-
+	func updateFullImage(_ imageURL: String) {
+		print(imageURL)
+	}
 }

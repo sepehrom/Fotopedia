@@ -17,6 +17,7 @@ class ImageSearchInteractor: BaseInteractor {
     var presenter: ImageSearchPresenterProtocol!
     var router: ImageSearchRouterProtocol!
     
+	weak var presentationDelegate: ImagePresentationDelegate?
     // MARK: - Methods
 }
 
@@ -25,4 +26,11 @@ extension ImageSearchInteractor: ImageSearchInteractorProtocol {
     func viewDidLoad() {
         
     }
+}
+
+extension ImageSearchInteractor: ImageSelectionDelegate {
+	func handleImageSelection(_ imageURL: String) {
+		presenter.prepareRequirementsForPresentation()
+		presentationDelegate?.handleImagePresentation(imageURL)
+	}
 }

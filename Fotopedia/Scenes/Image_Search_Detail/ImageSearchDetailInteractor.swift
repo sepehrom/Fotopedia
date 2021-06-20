@@ -25,3 +25,9 @@ extension ImageSearchDetailInteractor: ImageSearchDetailInteractorProtocol {
         
     }
 }
+
+extension ImageSearchDetailInteractor: ImagePresentationDelegate {
+	func handleImagePresentation(_ imageURL: String) {
+		presenter.presentImage(imageURL)
+	}
+}

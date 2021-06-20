@@ -16,10 +16,16 @@ protocol ImageSearchDetailInteractorProtocol: BaseInteractorProtocol {
 }
 
 protocol ImageSearchDetailPresenterProtocol: BasePresenterProtocol {
+	func presentImage(_ imageURL: String)
 }
 
 protocol ImageSearchDetailViewControllerProtocol: BaseViewControllerProtocol{
+	func updateFullImage(_ imageURL: String)
 }
 
 protocol ImageSearchDetailRouterProtocol: BaseRouterProtocol {
+}
+
+protocol ImagePresentationDelegate: class {
+	func handleImagePresentation(_ imageURL: String)
 }

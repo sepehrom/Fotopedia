@@ -21,6 +21,8 @@ class ImageSearchMasterInteractor: BaseInteractor {
 	var lastSearchTerm: String = ""
 	var lastFetchedPageNumber: Int = 1
 	var currentImageDataArray: [ImageData] = []
+	
+	weak var selectionDelegate: ImageSelectionDelegate?
     
     // MARK: - Methods
 	private override init() {}
@@ -29,7 +31,12 @@ class ImageSearchMasterInteractor: BaseInteractor {
 	}
 }
 
+// MARK: - ImageSearchMasterInteractorProtocol
 extension ImageSearchMasterInteractor: ImageSearchMasterInteractorProtocol {
+	func viewDidLoad() {
+		self.presenter.presentSearchInstructions()
+	}
+	
 	func didRequestCleanSearchForImages(searchTerm: String) {
 		self.lastSearchTerm = searchTerm
 		self.lastFetchedPageNumber = 0
@@ -64,7 +71,7 @@ extension ImageSearchMasterInteractor: ImageSearchMasterInteractorProtocol {
 								})
 	}
 	
-    func viewDidLoad() {
-		self.presenter.presentSearchInstructions()
-    }
+	func didSelectImage(url: String) {
+		selectionDelegate?.handleImageSelection(url)
+	}
 }

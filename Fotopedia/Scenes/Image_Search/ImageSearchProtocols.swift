@@ -25,3 +25,7 @@ protocol ImageSearchViewControllerProtocol: BaseSplitViewController{
 
 protocol ImageSearchRouterProtocol: BaseRouterProtocol {
 }
+
+protocol ImageSelectionDelegate: class {
+	func handleImageSelection(_ imageURL: String)
+}

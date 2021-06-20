@@ -136,7 +136,7 @@ extension ImageSearchMasterViewController: UICollectionViewDelegateFlowLayout {
 extension ImageSearchMasterViewController: UICollectionViewDelegate {
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		collectionView.deselectItem(at: indexPath, animated: true)
-		
+		imageSearchMasterInteractor.didSelectImage(url: imagesDataSource[indexPath.row])
 	}
 	
 	func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
