@@ -23,6 +23,7 @@ class ImageSearchDetailView: UIView {
     // MARK: NSObject
     override func awakeFromNib() {
         super.awakeFromNib()
+		self.backgroundColor = UIColor.systemBackground
 		
 		emptyStateView.backgroundColor = .clear
 		emptyStateIcon.image = UIImage(named: "noImageSelected")

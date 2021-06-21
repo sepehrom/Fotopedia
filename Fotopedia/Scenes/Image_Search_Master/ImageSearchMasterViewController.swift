@@ -39,6 +39,7 @@ class ImageSearchMasterViewController: BaseViewController {
 		}
 	}
 	var imagesDataSource: [String] = []
+	var searchHistoryDataSource: [String] = []
     var imageSearchMasterInteractor: ImageSearchMasterInteractorProtocol! {
         get {
             return interactor as? ImageSearchMasterInteractorProtocol
@@ -53,20 +54,28 @@ class ImageSearchMasterViewController: BaseViewController {
     
     // MARK: - Methods
     // MARK: UIViewController
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 		imageSearchMasterView.collectionView.dataSource = self
 		imageSearchMasterView.collectionView.delegate = self
 		
+		imageSearchMasterView.searchHistoryTableView.dataSource = self
+		imageSearchMasterView.searchHistoryTableView.delegate = self
+		
 		imageSearchMasterView.searchBar.delegate = self
 		imageSearchMasterView.searchBar.placeholder = "Search for images..."
+		
+		navigationItem.backButtonTitle = ""
+		updateNavigationTitle(searchTerm: "")
 	}
 	
-//	override func viewDidLayoutSubviews() {
-//		super.viewDidLayoutSubviews()
-//		imageSearchMasterView.collectionView.collectionViewLayout.invalidateLayout()
-//	}
+	func updateNavigationTitle(searchTerm: String) {
+		if (searchTerm.trimmingCharacters(in: .whitespacesAndNewlines) == "") {
+			navigationItem.title = "Fotopedia"
+		} else {
+			navigationItem.title = "#\(searchTerm)"
+		}
+	}
 }
 
 // MARK: - ImageSearchMasterViewControllerProtocol
@@ -84,14 +93,30 @@ extension ImageSearchMasterViewController: ImageSearchMasterViewControllerProtoc
 	func updateLayoutState(newState: ImageListState) {
 		self.currentImageListState = newState
 	}
+	
+	func updateSearchHistoryList(searchHistory: [String]) {
+		self.searchHistoryDataSource = searchHistory
+		self.imageSearchMasterView.searchHistoryTableView.reloadData()
+	}
 }
 
 // MARK: - UISearchBarDelegate
 extension ImageSearchMasterViewController: UISearchBarDelegate {
 	func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
 		searchBar.resignFirstResponder()
+		updateNavigationTitle(searchTerm: searchBar.text!)
 		imageSearchMasterInteractor.didRequestCleanSearchForImages(searchTerm: searchBar.text!)
 		self.imageSearchMasterView.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+	}
+	
+	func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+		if (searchHistoryDataSource.count > 0) {
+			self.imageSearchMasterView.searchHistoryTableView.isHidden = false
+		}
+	}
+	
+	func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+		self.imageSearchMasterView.searchHistoryTableView.isHidden = true
 	}
 }
 
@@ -156,5 +181,30 @@ extension ImageSearchMasterViewController: UICollectionViewDelegate {
 		guard previousTraitCollection != nil else { return }
 		imageSearchMasterView.collectionView.collectionViewLayout.invalidateLayout()
 		imageSearchMasterView.layoutSubviews()
+	}
+}
+
+// MARK: - UITableViewDataSource
+extension ImageSearchMasterViewController: UITableViewDataSource {
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		self.searchHistoryDataSource.count
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCell(withIdentifier: SearchHistoryTableViewCell.reuseIdentifier, for: indexPath) as! SearchHistoryTableViewCell
+		cell.textLabel?.text = self.searchHistoryDataSource[indexPath.row]
+		return cell
+	}
+}
+
+// MARK: - UITableViewDelegate
+extension ImageSearchMasterViewController: UITableViewDelegate {
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
+		let selectedSearchTerm = self.searchHistoryDataSource[indexPath.row]
+		imageSearchMasterView.searchBar.text = selectedSearchTerm
+		imageSearchMasterView.searchBar.resignFirstResponder()
+		imageSearchMasterInteractor.didRequestCleanSearchForImages(searchTerm: selectedSearchTerm)
+		updateNavigationTitle(searchTerm: selectedSearchTerm)
 	}
 }

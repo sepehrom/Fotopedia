@@ -23,12 +23,14 @@ protocol ImageSearchMasterPresenterProtocol: BasePresenterProtocol {
 	func presentServerError(errorMessage: String)
 	func presentSearchInstructions()
 	func presentLoadingState()
+	func presentNewSearchHistoryList(searchHistory: [String])
 }
 
 protocol ImageSearchMasterViewControllerProtocol: BaseViewControllerProtocol{
 	func updateImagesDataSource(newDataSource: [String])
 	func updateEmptyStateView(emptyStateReason: String, emptyStateImage: UIImage)
 	func updateLayoutState(newState: ImageListState)
+	func updateSearchHistoryList(searchHistory: [String])
 }
 
 protocol ImageSearchMasterRouterProtocol: BaseRouterProtocol {

@@ -27,6 +27,7 @@ class ImageSearchMasterBuilder: BaseBuilder {
         
         interactor.presenter = presenter
         interactor.router = router
+		interactor.storageManager = UserDefaultsManager()
         
         presenter.viewController = viewController
         

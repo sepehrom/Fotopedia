@@ -16,11 +16,13 @@ class ImageSearchMasterInteractor: BaseInteractor {
     // MARK: - Properties
     var presenter: ImageSearchMasterPresenterProtocol!
     var router: ImageSearchMasterRouterProtocol!
+	var storageManager: UserDefaultsManagerProtocol!
 	
 	var imageLoader: ImageLoader?
 	var lastSearchTerm: String = ""
 	var lastFetchedPageNumber: Int = 1
 	var currentImageDataArray: [ImageData] = []
+	var searchHistory: [String] = []
 	
 	weak var selectionDelegate: ImageSelectionDelegate?
     
@@ -34,6 +36,8 @@ class ImageSearchMasterInteractor: BaseInteractor {
 // MARK: - ImageSearchMasterInteractorProtocol
 extension ImageSearchMasterInteractor: ImageSearchMasterInteractorProtocol {
 	func viewDidLoad() {
+		self.searchHistory = storageManager.stringArray(forKey: .searchHistory) ?? []
+		self.presenter.presentNewSearchHistoryList(searchHistory: self.searchHistory)
 		self.presenter.presentSearchInstructions()
 		selectionDelegate?.handleImageSelection("")
 	}
@@ -58,6 +62,9 @@ extension ImageSearchMasterInteractor: ImageSearchMasterInteractorProtocol {
 		if (lastFetchedPageNumber == 0) {
 			self.presenter.presentLoadingState()
 		}
+		if (searchTerm.trimmingCharacters(in: .whitespacesAndNewlines) != "") {
+			updateSearchHistory(searchTerm: searchTerm)
+		}
 		imageLoader!.loadImages(searchTerm: searchTerm,
 								page: lastFetchedPageNumber+1,
 								successCallback: { imageDataArray in
@@ -75,5 +82,14 @@ extension ImageSearchMasterInteractor: ImageSearchMasterInteractorProtocol {
 	
 	func didSelectImage(url: String) {
 		selectionDelegate?.handleImageSelection(url)
+	}
+	
+	func updateSearchHistory(searchTerm: String) {
+		if (searchHistory.contains(searchTerm)) {
+			searchHistory.remove(at: searchHistory.firstIndex(of: searchTerm)!)
+		}
+		searchHistory.insert(searchTerm, at: 0)
+		storageManager.set(searchHistory, forKey: .searchHistory)
+		self.presenter.presentNewSearchHistoryList(searchHistory: self.searchHistory)
 	}
 }

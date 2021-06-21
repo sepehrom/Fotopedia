@@ -48,9 +48,6 @@
                                     <constraint firstItem="nNE-ML-Uee" firstAttribute="width" secondItem="kaZ-ST-w7z" secondAttribute="width" multiplier="0.5" id="xDh-lg-uot"/>
                                 </constraints>
                             </view>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ooE-AN-DG0">
-                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
-                            </activityIndicatorView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dEW-cu-iWO">
                                 <rect key="frame" x="8" y="64" width="359" height="611"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -61,7 +58,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="bG8-s3-e5t" customClass="ImageCollectionViewCell" customModule="Fotopedia" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="bG8-s3-e5t" customClass="ImageCollectionViewCell" customModule="Fotopedia" customModuleProvider="target">
                                         <rect key="frame" x="86.5" y="0.0" width="186" height="182"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Hax-Mr-yCm">
@@ -85,6 +82,36 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ooE-AN-DG0">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vRY-Ph-OhZ">
+                                <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchHistoryCell" id="GoB-5Y-5Y8" customClass="SearchHistoryTableViewCell" customModule="Fotopedia" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GoB-5Y-5Y8" id="qgd-nE-gio">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchHistory" translatesAutoresizingMaskIntoConstraints="NO" id="2fd-CC-V4E">
+                                                    <rect key="frame" x="335" y="10" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="4qF-2N-U67"/>
+                                                        <constraint firstAttribute="height" constant="24" id="9Vn-mv-snq"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2fd-CC-V4E" firstAttribute="centerY" secondItem="qgd-nE-gio" secondAttribute="centerY" id="GBm-Ao-tTF"/>
+                                                <constraint firstAttribute="trailing" secondItem="2fd-CC-V4E" secondAttribute="trailing" constant="16" id="ODM-8l-cd3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9gO-lw-5Q7"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -92,14 +119,18 @@
                             <constraint firstItem="pCA-ha-ENa" firstAttribute="trailing" secondItem="9gO-lw-5Q7" secondAttribute="trailing" id="012-Re-lqT"/>
                             <constraint firstItem="ooE-AN-DG0" firstAttribute="centerX" secondItem="9gO-lw-5Q7" secondAttribute="centerX" id="69v-9A-Ptd"/>
                             <constraint firstItem="ooE-AN-DG0" firstAttribute="centerY" secondItem="9gO-lw-5Q7" secondAttribute="centerY" id="6wJ-WC-zhr"/>
+                            <constraint firstAttribute="bottom" secondItem="vRY-Ph-OhZ" secondAttribute="bottom" id="7TA-aB-X2w"/>
                             <constraint firstItem="pCA-ha-ENa" firstAttribute="leading" secondItem="9gO-lw-5Q7" secondAttribute="leading" id="94E-QQ-4oC"/>
                             <constraint firstItem="dEW-cu-iWO" firstAttribute="leading" secondItem="9gO-lw-5Q7" secondAttribute="leading" constant="8" id="Agk-mX-nNE"/>
                             <constraint firstItem="kaZ-ST-w7z" firstAttribute="centerY" secondItem="4xN-48-H36" secondAttribute="centerY" id="Iqh-ac-j5S"/>
                             <constraint firstItem="dEW-cu-iWO" firstAttribute="trailing" secondItem="9gO-lw-5Q7" secondAttribute="trailing" constant="-8" id="M9z-N1-JdY"/>
                             <constraint firstItem="dEW-cu-iWO" firstAttribute="bottom" secondItem="9gO-lw-5Q7" secondAttribute="bottom" constant="8" id="VfH-lz-Bh3"/>
+                            <constraint firstItem="vRY-Ph-OhZ" firstAttribute="leading" secondItem="9gO-lw-5Q7" secondAttribute="leading" id="VhF-sa-ixr"/>
                             <constraint firstItem="kaZ-ST-w7z" firstAttribute="centerX" secondItem="pCA-ha-ENa" secondAttribute="centerX" id="amo-JB-y1O"/>
+                            <constraint firstItem="vRY-Ph-OhZ" firstAttribute="top" secondItem="pCA-ha-ENa" secondAttribute="bottom" id="bVP-dX-EHw"/>
                             <constraint firstItem="dEW-cu-iWO" firstAttribute="top" secondItem="pCA-ha-ENa" secondAttribute="bottom" constant="8" id="oLp-sc-xaT"/>
                             <constraint firstItem="kaZ-ST-w7z" firstAttribute="width" secondItem="pCA-ha-ENa" secondAttribute="width" multiplier="0.7" id="oaq-4D-lWk"/>
+                            <constraint firstItem="9gO-lw-5Q7" firstAttribute="trailing" secondItem="vRY-Ph-OhZ" secondAttribute="trailing" id="xzo-fs-fNL"/>
                             <constraint firstItem="pCA-ha-ENa" firstAttribute="top" secondItem="9gO-lw-5Q7" secondAttribute="top" id="zBi-9f-94J"/>
                         </constraints>
                         <connections>
@@ -109,6 +140,7 @@
                             <outlet property="emptyStateView" destination="kaZ-ST-w7z" id="G1N-Be-n4d"/>
                             <outlet property="loadingIndicator" destination="ooE-AN-DG0" id="B3p-6A-FHr"/>
                             <outlet property="searchBar" destination="pCA-ha-ENa" id="slE-Xj-b2L"/>
+                            <outlet property="searchHistoryTableView" destination="vRY-Ph-OhZ" id="tZt-N9-d2g"/>
                         </connections>
                     </view>
                 </viewController>
@@ -119,6 +151,7 @@
     </scenes>
     <resources>
         <image name="imageIcon" width="512" height="512"/>
+        <image name="searchHistory" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -53,4 +53,8 @@ extension ImageSearchMasterPresenter: ImageSearchMasterPresenterProtocol {
 			viewController.updateLayoutState(newState: .displayingResult)
 		}
 	}
+	
+	func presentNewSearchHistoryList(searchHistory: [String]) {
+		viewController.updateSearchHistoryList(searchHistory: searchHistory)
+	}
 }

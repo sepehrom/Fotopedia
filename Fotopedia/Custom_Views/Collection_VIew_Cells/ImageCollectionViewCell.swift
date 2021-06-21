@@ -9,7 +9,7 @@
 import UIKit
 
 class ImageCollectionViewCell: UICollectionViewCell {
-	static let reuseIdentifier = "imageCell"
+	static let reuseIdentifier = "ImageCell"
 	@IBOutlet weak var imageView: UIImageView!
 	
 	override func awakeFromNib() {

@@ -20,6 +20,7 @@ class ImageSearchMasterView: UIView {
 	@IBOutlet weak var emptyStateReasonImage: UIImageView!
 	@IBOutlet weak var emptyStateReasonLabel: UILabel!
 	@IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+	@IBOutlet weak var searchHistoryTableView: UITableView!
 	
     // MARK: - Methods
     // MARK: NSObject
@@ -33,5 +34,8 @@ class ImageSearchMasterView: UIView {
 		
 		self.collectionView.keyboardDismissMode = .onDrag
 		self.collectionView.backgroundColor = UIColor.systemBackground
+		
+		self.searchHistoryTableView.isHidden = true
+		self.searchHistoryTableView.tableFooterView = UIView(frame: CGRect.zero)
     }
 }
