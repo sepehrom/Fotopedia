@@ -35,6 +35,7 @@ class ImageSearchMasterInteractor: BaseInteractor {
 extension ImageSearchMasterInteractor: ImageSearchMasterInteractorProtocol {
 	func viewDidLoad() {
 		self.presenter.presentSearchInstructions()
+		selectionDelegate?.handleImageSelection("")
 	}
 	
 	func didRequestCleanSearchForImages(searchTerm: String) {
@@ -43,6 +44,7 @@ extension ImageSearchMasterInteractor: ImageSearchMasterInteractorProtocol {
 		self.currentImageDataArray = []
 		guard searchTerm != "" else {
 			self.presenter.presentSearchInstructions()
+			selectionDelegate?.handleImageSelection("")
 			return
 		}
 		continueToSearchForImages(searchTerm: searchTerm)

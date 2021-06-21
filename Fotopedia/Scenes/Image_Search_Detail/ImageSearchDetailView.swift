@@ -15,11 +15,20 @@ import UIKit
 class ImageSearchDetailView: UIView {
     // MARK: - Properties
 	@IBOutlet weak var imageView: UIImageView!
+	@IBOutlet weak var emptyStateView: UIView!
+	@IBOutlet weak var emptyStateIcon: UIImageView!
+	@IBOutlet weak var emptyStateLabel: UILabel!
 	
     // MARK: - Methods
     // MARK: NSObject
     override func awakeFromNib() {
         super.awakeFromNib()
-
+		
+		emptyStateView.backgroundColor = .clear
+		emptyStateIcon.image = UIImage(named: "noImageSelected")
+		
+		emptyStateLabel.text = "Search and select a photo to see the full size"
+		emptyStateLabel.textAlignment = .center
+		emptyStateLabel.numberOfLines = 0
     }
 }

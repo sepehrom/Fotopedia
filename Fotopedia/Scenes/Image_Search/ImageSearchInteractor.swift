@@ -30,7 +30,9 @@ extension ImageSearchInteractor: ImageSearchInteractorProtocol {
 
 extension ImageSearchInteractor: ImageSelectionDelegate {
 	func handleImageSelection(_ imageURL: String) {
-		presenter.prepareRequirementsForPresentation()
+		if (imageURL != "") {
+			presenter.prepareRequirementsForPresentation()
+		}
 		presentationDelegate?.handleImagePresentation(imageURL)
 	}
 }

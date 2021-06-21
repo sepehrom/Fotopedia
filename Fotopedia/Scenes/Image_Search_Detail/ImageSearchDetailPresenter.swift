@@ -21,6 +21,10 @@ class ImageSearchDetailPresenter: BasePresenter {
 
 extension ImageSearchDetailPresenter: ImageSearchDetailPresenterProtocol {
 	func presentImage(_ imageURL: String) {
-		viewController.updateFullImage(imageURL)
+		if (imageURL == "") {
+			viewController.displayEmptyState()
+		} else {
+			viewController.displayFullImage(imageURL)
+		}
 	}
 }

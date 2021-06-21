@@ -20,7 +20,8 @@ protocol ImageSearchDetailPresenterProtocol: BasePresenterProtocol {
 }
 
 protocol ImageSearchDetailViewControllerProtocol: BaseViewControllerProtocol{
-	func updateFullImage(_ imageURL: String)
+	func displayEmptyState()
+	func displayFullImage(_ imageURL: String)
 }
 
 protocol ImageSearchDetailRouterProtocol: BaseRouterProtocol {

@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,16 +19,50 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Fw-oH-rTn">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XRq-1g-StY">
+                                <rect key="frame" x="56.5" y="202.5" width="262.5" height="262.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noImageSelected" translatesAutoresizingMaskIntoConstraints="NO" id="TJr-mG-FjP">
+                                        <rect key="frame" x="91.5" y="59" width="79" height="78.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="TJr-mG-FjP" secondAttribute="height" multiplier="1:1" id="JQ6-7w-lDO"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQT-aI-vNf">
+                                        <rect key="frame" x="8" y="153.5" width="246.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="dQT-aI-vNf" firstAttribute="leading" secondItem="XRq-1g-StY" secondAttribute="leading" constant="8" id="HfC-2V-Jqg"/>
+                                    <constraint firstItem="TJr-mG-FjP" firstAttribute="width" secondItem="XRq-1g-StY" secondAttribute="width" multiplier="0.3" id="Hw6-5U-y48"/>
+                                    <constraint firstAttribute="trailing" secondItem="dQT-aI-vNf" secondAttribute="trailing" constant="8" id="a1c-Bn-lL2"/>
+                                    <constraint firstItem="TJr-mG-FjP" firstAttribute="centerX" secondItem="XRq-1g-StY" secondAttribute="centerX" id="gF6-6q-zqL"/>
+                                    <constraint firstItem="dQT-aI-vNf" firstAttribute="centerX" secondItem="TJr-mG-FjP" secondAttribute="centerX" id="gkM-jw-q2i"/>
+                                    <constraint firstItem="dQT-aI-vNf" firstAttribute="top" secondItem="TJr-mG-FjP" secondAttribute="bottom" constant="16" id="oLv-3u-qs9"/>
+                                    <constraint firstItem="TJr-mG-FjP" firstAttribute="centerY" secondItem="XRq-1g-StY" secondAttribute="centerY" multiplier="0.75" id="pxl-DF-Uqe"/>
+                                    <constraint firstAttribute="width" secondItem="XRq-1g-StY" secondAttribute="height" multiplier="1:1" id="si7-1h-ATO"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9gO-lw-5Q7"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9gO-lw-5Q7" firstAttribute="trailing" secondItem="6Fw-oH-rTn" secondAttribute="trailing" id="JZx-KX-b8j"/>
+                            <constraint firstItem="XRq-1g-StY" firstAttribute="centerX" secondItem="9gO-lw-5Q7" secondAttribute="centerX" id="Jkb-nl-JrA"/>
+                            <constraint firstItem="XRq-1g-StY" firstAttribute="width" secondItem="4xN-48-H36" secondAttribute="width" multiplier="0.7" id="Jpl-5c-76a"/>
                             <constraint firstItem="9gO-lw-5Q7" firstAttribute="bottom" secondItem="6Fw-oH-rTn" secondAttribute="bottom" id="Vg4-7N-VE3"/>
+                            <constraint firstItem="XRq-1g-StY" firstAttribute="centerY" secondItem="9gO-lw-5Q7" secondAttribute="centerY" id="bx6-ox-Vu4"/>
                             <constraint firstItem="6Fw-oH-rTn" firstAttribute="leading" secondItem="9gO-lw-5Q7" secondAttribute="leading" id="fo6-kH-WfH"/>
                             <constraint firstItem="6Fw-oH-rTn" firstAttribute="top" secondItem="9gO-lw-5Q7" secondAttribute="top" id="nKt-cI-4HL"/>
                         </constraints>
                         <connections>
+                            <outlet property="emptyStateIcon" destination="TJr-mG-FjP" id="AfV-9a-QIT"/>
+                            <outlet property="emptyStateLabel" destination="dQT-aI-vNf" id="DfZ-02-5Br"/>
+                            <outlet property="emptyStateView" destination="XRq-1g-StY" id="VT8-cl-Mpa"/>
                             <outlet property="imageView" destination="6Fw-oH-rTn" id="02N-h5-dR8"/>
                         </connections>
                     </view>
@@ -37,4 +72,10 @@
             <point key="canvasLocation" x="-207" y="-39"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="noImageSelected" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
