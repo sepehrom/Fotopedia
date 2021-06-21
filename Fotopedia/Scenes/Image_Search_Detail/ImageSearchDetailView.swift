@@ -14,7 +14,8 @@ import UIKit
 
 class ImageSearchDetailView: UIView {
     // MARK: - Properties
-
+	@IBOutlet weak var imageView: UIImageView!
+	
     // MARK: - Methods
     // MARK: NSObject
     override func awakeFromNib() {

@@ -62,6 +62,11 @@ class ImageSearchMasterViewController: BaseViewController {
 		imageSearchMasterView.searchBar.delegate = self
 		imageSearchMasterView.searchBar.placeholder = "Search for images..."
 	}
+	
+//	override func viewDidLayoutSubviews() {
+//		super.viewDidLayoutSubviews()
+//		imageSearchMasterView.collectionView.collectionViewLayout.invalidateLayout()
+//	}
 }
 
 // MARK: - ImageSearchMasterViewControllerProtocol
@@ -144,5 +149,12 @@ extension ImageSearchMasterViewController: UICollectionViewDelegate {
 		if (bottomEdge >= scrollView.contentSize.height) {
 			imageSearchMasterInteractor.didScrollToTheEndOfSearchResult()
 		}
+	}
+	
+	override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+		super.traitCollectionDidChange(previousTraitCollection)
+		guard previousTraitCollection != nil else { return }
+		imageSearchMasterView.collectionView.collectionViewLayout.invalidateLayout()
+		imageSearchMasterView.layoutSubviews()
 	}
 }

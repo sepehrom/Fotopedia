@@ -21,9 +21,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ooE-AN-DG0">
-                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
-                            </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kaZ-ST-w7z">
                                 <rect key="frame" x="56.5" y="202.5" width="262.5" height="262.5"/>
                                 <subviews>
@@ -44,14 +41,16 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="kaZ-ST-w7z" secondAttribute="height" multiplier="1:1" id="DWY-N1-oVt"/>
                                     <constraint firstItem="49Z-2T-rME" firstAttribute="leading" secondItem="kaZ-ST-w7z" secondAttribute="leading" constant="8" id="XlK-Tf-TgW"/>
-                                    <constraint firstItem="49Z-2T-rME" firstAttribute="centerX" secondItem="kaZ-ST-w7z" secondAttribute="centerX" id="aoA-eU-JUj"/>
-                                    <constraint firstItem="nNE-ML-Uee" firstAttribute="centerX" secondItem="kaZ-ST-w7z" secondAttribute="centerX" id="cJK-A3-2D4"/>
                                     <constraint firstItem="nNE-ML-Uee" firstAttribute="centerY" secondItem="kaZ-ST-w7z" secondAttribute="centerY" multiplier="0.75" id="hn0-gD-AMH"/>
+                                    <constraint firstItem="nNE-ML-Uee" firstAttribute="centerX" secondItem="kaZ-ST-w7z" secondAttribute="centerX" id="hpM-74-zdc"/>
                                     <constraint firstAttribute="trailing" secondItem="49Z-2T-rME" secondAttribute="trailing" constant="8" id="i2u-SN-qv5"/>
                                     <constraint firstItem="49Z-2T-rME" firstAttribute="top" secondItem="nNE-ML-Uee" secondAttribute="bottom" constant="24.5" id="mc4-6z-8Jd"/>
                                     <constraint firstItem="nNE-ML-Uee" firstAttribute="width" secondItem="kaZ-ST-w7z" secondAttribute="width" multiplier="0.5" id="xDh-lg-uot"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ooE-AN-DG0">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dEW-cu-iWO">
                                 <rect key="frame" x="8" y="64" width="359" height="611"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -98,9 +97,9 @@
                             <constraint firstItem="kaZ-ST-w7z" firstAttribute="centerY" secondItem="4xN-48-H36" secondAttribute="centerY" id="Iqh-ac-j5S"/>
                             <constraint firstItem="dEW-cu-iWO" firstAttribute="trailing" secondItem="9gO-lw-5Q7" secondAttribute="trailing" constant="-8" id="M9z-N1-JdY"/>
                             <constraint firstItem="dEW-cu-iWO" firstAttribute="bottom" secondItem="9gO-lw-5Q7" secondAttribute="bottom" constant="8" id="VfH-lz-Bh3"/>
+                            <constraint firstItem="kaZ-ST-w7z" firstAttribute="centerX" secondItem="pCA-ha-ENa" secondAttribute="centerX" id="amo-JB-y1O"/>
                             <constraint firstItem="dEW-cu-iWO" firstAttribute="top" secondItem="pCA-ha-ENa" secondAttribute="bottom" constant="8" id="oLp-sc-xaT"/>
-                            <constraint firstItem="kaZ-ST-w7z" firstAttribute="width" secondItem="4xN-48-H36" secondAttribute="width" multiplier="0.7" id="qWv-vV-8G2"/>
-                            <constraint firstItem="kaZ-ST-w7z" firstAttribute="centerX" secondItem="4xN-48-H36" secondAttribute="centerX" id="ynZ-0o-sc3"/>
+                            <constraint firstItem="kaZ-ST-w7z" firstAttribute="width" secondItem="pCA-ha-ENa" secondAttribute="width" multiplier="0.7" id="oaq-4D-lWk"/>
                             <constraint firstItem="pCA-ha-ENa" firstAttribute="top" secondItem="9gO-lw-5Q7" secondAttribute="top" id="zBi-9f-94J"/>
                         </constraints>
                         <connections>
