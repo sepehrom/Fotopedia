@@ -22,9 +22,10 @@ class ImageSearchMasterPresenter: BasePresenter {
 	}
 }
 
+// MARK: - ImageSearchMasterPresenterProtocol
 extension ImageSearchMasterPresenter: ImageSearchMasterPresenterProtocol {
 	func presentSearchInstructions() {
-		viewController.updateEmptyStateView(emptyStateReason: "Use the search bar to find the images you want.",
+		viewController.updateEmptyStateView(emptyStateReason: Strings.MasterPresenter.emptyStateDefaultText,
 											emptyStateImage: UIImage(named: "imageIcon")!)
 		viewController.updateLayoutState(newState: .noValidSearchResult)
 	}
@@ -41,7 +42,7 @@ extension ImageSearchMasterPresenter: ImageSearchMasterPresenterProtocol {
 	
 	func presentImages(imagesDataArray: [ImageData]) {
 		if (imagesDataArray.count == 0) {
-			viewController.updateEmptyStateView(emptyStateReason: "No images found.\nTry another search term.",
+			viewController.updateEmptyStateView(emptyStateReason: Strings.MasterPresenter.noImagesFound,
 												emptyStateImage: UIImage(named: "noSearchResult")!)
 			viewController.updateLayoutState(newState: .noValidSearchResult)
 		} else {

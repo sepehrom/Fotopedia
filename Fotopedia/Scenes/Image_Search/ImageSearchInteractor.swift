@@ -23,11 +23,10 @@ class ImageSearchInteractor: BaseInteractor {
 
 // MARK: - ImageSearchInteractorProtocol
 extension ImageSearchInteractor: ImageSearchInteractorProtocol {
-    func viewDidLoad() {
-        
-    }
+    func viewDidLoad() { }
 }
 
+// MARK: - ImageSelectionDelegate
 extension ImageSearchInteractor: ImageSelectionDelegate {
 	func handleImageSelection(_ imageURL: String) {
 		if (imageURL != "") {

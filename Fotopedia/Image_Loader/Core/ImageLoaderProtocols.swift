@@ -13,7 +13,7 @@ typealias ImageSearchFailureResponseHandler = (Error) -> Void
 
 protocol ImageLoader {
 	func loadImages(searchTerm: String,
-					page: Int,
+					pageNumber: Int,
 					successCallback: @escaping ImageSearchSuccessResponseHandler,
 					failureCallback: @escaping ImageSearchFailureResponseHandler)
 }

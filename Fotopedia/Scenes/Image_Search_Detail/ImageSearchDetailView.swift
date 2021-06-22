@@ -26,9 +26,9 @@ class ImageSearchDetailView: UIView {
 		self.backgroundColor = UIColor.systemBackground
 		
 		emptyStateView.backgroundColor = .clear
-		emptyStateIcon.image = UIImage(named: "noImageSelected")
+		emptyStateIcon.image           = UIImage(named: "noImageSelected")
 		
-		emptyStateLabel.text = "Search and select a photo to see the full size"
+		emptyStateLabel.text          = Strings.DetailView.emptyStateDefaultText
 		emptyStateLabel.textAlignment = .center
 		emptyStateLabel.numberOfLines = 0
     }

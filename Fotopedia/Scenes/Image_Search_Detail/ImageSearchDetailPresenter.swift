@@ -19,6 +19,7 @@ class ImageSearchDetailPresenter: BasePresenter {
     // MARK: - Methods
 }
 
+// MARK: - ImageSearchDetailPresenterProtocol
 extension ImageSearchDetailPresenter: ImageSearchDetailPresenterProtocol {
 	func presentImage(_ imageURL: String) {
 		if (imageURL == "") {

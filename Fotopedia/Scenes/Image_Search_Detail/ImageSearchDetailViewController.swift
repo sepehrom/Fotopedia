@@ -34,6 +34,7 @@ class ImageSearchDetailViewController: BaseViewController {
     }
 }
 
+// MARK: - ImageSearchDetailViewControllerProtocol
 extension ImageSearchDetailViewController: ImageSearchDetailViewControllerProtocol {
 	func displayEmptyState() {
 		imageSearchDetailView.imageView.isHidden      = true
@@ -42,6 +43,7 @@ extension ImageSearchDetailViewController: ImageSearchDetailViewControllerProtoc
 	func displayFullImage(_ imageURL: String) {
 		imageSearchDetailView.imageView.isHidden      = false
 		imageSearchDetailView.emptyStateView.isHidden = true
+		
 		imageSearchDetailView.imageView.kf.setImage(with: URL(string: imageURL))
 	}
 }

@@ -8,7 +8,10 @@
 
 import Foundation
 
-class FlickrImageSearchResponseParser: ImageSearchResponseParser {
+class FlickrImageSearchResponseParser { }
+
+// MARK: - ImageSearchResponseParser
+extension FlickrImageSearchResponseParser: ImageSearchResponseParser {
 	func parse(responseObject: Dictionary<String, Any>) -> [ImageData] {
 		var result = Array<ImageData>()
 		let photosDic = responseObject["photos"]! as! Dictionary<String, Any>
@@ -21,9 +24,7 @@ class FlickrImageSearchResponseParser: ImageSearchResponseParser {
 										 server:     photoData["server"] as! String,
 										 farm:       photoData["farm"] as! Int,
 										 title:      photoData["title"] as! String,
-										 isPublic:   photoData["ispublic"] as! Bool,
-										 isFriend:   photoData["isfriend"] as! Bool,
-										 isFamily:   photoData["isfamily"] as! Bool)
+										 isPublic:   photoData["ispublic"] as! Bool)
 			result.append(newImageData)
 		}
 		return result

@@ -9,7 +9,6 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
 	var window: UIWindow?
 	
 	func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -21,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 			let (imageSearchDetailVC, imageSearchDetailInteractor) = ImageSearchDetailBuilder.build()
 			
 			imageSearchMasterInteractor.selectionDelegate = imageSearchInteractor
-			imageSearchInteractor.presentationDelegate = imageSearchDetailInteractor
+			imageSearchInteractor.presentationDelegate    = imageSearchDetailInteractor
 			
 			imageSearchVC.setViewController(UINavigationController(rootViewController: imageSearchMasterVC), for: .primary)
 			imageSearchVC.setViewController(UINavigationController(rootViewController: imageSearchDetailVC), for: .secondary)

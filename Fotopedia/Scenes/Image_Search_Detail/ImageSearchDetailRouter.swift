@@ -19,6 +19,7 @@ class ImageSearchDetailRouter: BaseRouter {
     // MARK: - Methods
 }
 
+// MARK: - ImageSearchDetailRouterProtocol
 extension ImageSearchDetailRouter: ImageSearchDetailRouterProtocol {
 
 }

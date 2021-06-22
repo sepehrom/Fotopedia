@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		033A5A88D6C0417BD8674642 /* Pods_Fotopedia_FotopediaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D9E6570C976C538E42538F /* Pods_Fotopedia_FotopediaUITests.framework */; };
+		1DAF88D82682A5250089EAC9 /* UserDefaultsManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAF88D72682A5250089EAC9 /* UserDefaultsManagerProtocol.swift */; };
+		1DAF88E52682A7C90089EAC9 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAF88E42682A7C90089EAC9 /* Strings.swift */; };
 		1DBA8EF8267E6EB0007C6F77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8EF7267E6EB0007C6F77 /* AppDelegate.swift */; };
 		1DBA8EFA267E6EB0007C6F77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA8EF9267E6EB0007C6F77 /* SceneDelegate.swift */; };
 		1DBA8F01267E6EB1007C6F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DBA8F00267E6EB1007C6F77 /* Assets.xcassets */; };
@@ -79,6 +81,8 @@
 
 /* Begin PBXFileReference section */
 		09D9E6570C976C538E42538F /* Pods_Fotopedia_FotopediaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fotopedia_FotopediaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DAF88D72682A5250089EAC9 /* UserDefaultsManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManagerProtocol.swift; sourceTree = "<group>"; };
+		1DAF88E42682A7C90089EAC9 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		1DBA8EF4267E6EB0007C6F77 /* Fotopedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fotopedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DBA8EF7267E6EB0007C6F77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DBA8EF9267E6EB0007C6F77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +188,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		1DAF88DC2682A5290089EAC9 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				1DBCB4E626814CF90003D73C /* UserDefaultsManager.swift */,
+				1DAF88D72682A5250089EAC9 /* UserDefaultsManagerProtocol.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		1DAF88E32682A7BA0089EAC9 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				1DAF88E42682A7C90089EAC9 /* Strings.swift */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
 		1DBA8EEB267E6EB0007C6F77 = {
 			isa = PBXGroup;
 			children = (
@@ -261,7 +282,7 @@
 		1DBA8F42267E7105007C6F77 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				1DBCB4E626814CF90003D73C /* UserDefaultsManager.swift */,
+				1DAF88DC2682A5290089EAC9 /* UserDefaults */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -290,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				1DBA8F47267E7165007C6F77 /* Xcode_Assets */,
+				1DAF88E32682A7BA0089EAC9 /* Strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -695,6 +717,7 @@
 				1DBA8FF8267E8F0F007C6F77 /* ImageSearchMasterViewController.swift in Sources */,
 				1DBCB4ED268152770003D73C /* SearchHistoryTableViewCell.swift in Sources */,
 				1DBA900E267E8F1A007C6F77 /* ImageSearchDetailInteractor.swift in Sources */,
+				1DAF88E52682A7C90089EAC9 /* Strings.swift in Sources */,
 				1DBA8FFC267E8F0F007C6F77 /* ImageSearchMasterView.swift in Sources */,
 				1DBA8FE0267E8ED2007C6F77 /* ImageSearchViewController.swift in Sources */,
 				1DC1D99A267EB3F700B18B0D /* ImageCollectionViewCell.swift in Sources */,
@@ -710,6 +733,7 @@
 				1DBA8FA6267E7CE9007C6F77 /* ImageData.swift in Sources */,
 				1DBA8F5C267E7389007C6F77 /* BaseBuilder.swift in Sources */,
 				1DBA8F69267E73BC007C6F77 /* BaseSplitViewController.swift in Sources */,
+				1DAF88D82682A5250089EAC9 /* UserDefaultsManagerProtocol.swift in Sources */,
 				1DBA8F8B267E77F3007C6F77 /* RemoteImageLoader.swift in Sources */,
 				1DBA8FF6267E8F0F007C6F77 /* ImageSearchMasterRouter.swift in Sources */,
 				1DBA8F73267E73D9007C6F77 /* BaseProtocols.swift in Sources */,

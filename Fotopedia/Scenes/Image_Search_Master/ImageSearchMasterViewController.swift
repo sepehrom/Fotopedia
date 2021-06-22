@@ -24,8 +24,8 @@ class ImageSearchMasterViewController: BaseViewController {
 	var currentImageListState: ImageListState = .noValidSearchResult {
 		didSet {
 			self.imageSearchMasterView.loadingIndicator.isHidden = (currentImageListState != .searchInProgress)
-			self.imageSearchMasterView.emptyStateView.isHidden = (currentImageListState != .noValidSearchResult)
-			self.imageSearchMasterView.collectionView.isHidden = (currentImageListState != .displayingResult)
+			self.imageSearchMasterView.emptyStateView.isHidden   = (currentImageListState != .noValidSearchResult)
+			self.imageSearchMasterView.collectionView.isHidden   = (currentImageListState != .displayingResult)
 		}
 	}
 	var currentEmptyStateReason: String = "" {
@@ -57,13 +57,13 @@ class ImageSearchMasterViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		imageSearchMasterView.collectionView.dataSource = self
-		imageSearchMasterView.collectionView.delegate = self
+		imageSearchMasterView.collectionView.delegate   = self
 		
 		imageSearchMasterView.searchHistoryTableView.dataSource = self
-		imageSearchMasterView.searchHistoryTableView.delegate = self
+		imageSearchMasterView.searchHistoryTableView.delegate   = self
 		
-		imageSearchMasterView.searchBar.delegate = self
-		imageSearchMasterView.searchBar.placeholder = "Search for images..."
+		imageSearchMasterView.searchBar.delegate    = self
+		imageSearchMasterView.searchBar.placeholder = Strings.MasterVC.searchBarPlaceholder
 		
 		navigationItem.backButtonTitle = ""
 		updateNavigationTitle(searchTerm: "")
@@ -76,7 +76,7 @@ class ImageSearchMasterViewController: BaseViewController {
 	
 	func updateNavigationTitle(searchTerm: String) {
 		if (searchTerm.trimmingCharacters(in: .whitespacesAndNewlines) == "") {
-			navigationItem.title = "Fotopedia"
+			navigationItem.title = Strings.MasterVC.navigationTitle
 		} else {
 			navigationItem.title = "#\(searchTerm)"
 		}
@@ -134,7 +134,8 @@ extension ImageSearchMasterViewController: UICollectionViewDataSource {
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.reuseIdentifier, for: indexPath) as! ImageCollectionViewCell
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.reuseIdentifier,
+													  for: indexPath) as! ImageCollectionViewCell
 		cell.imageView.kf.setImage(with: URL(string: self.imagesDataSource[indexPath.row]), placeholder: UIImage(named: "imagePlaceholder"))
 		return cell
 	}
@@ -142,24 +143,24 @@ extension ImageSearchMasterViewController: UICollectionViewDataSource {
 
 // MARK: - UICollectionViewDelegateFlowLayout
 extension ImageSearchMasterViewController: UICollectionViewDelegateFlowLayout {
-
 	func collectionView(_ collectionView: UICollectionView,
 						layout collectionViewLayout: UICollectionViewLayout,
 						sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: collectionView.bounds.size.width/2, height: collectionView.bounds.size.width/2)
+		return CGSize(width: collectionView.bounds.size.width/2,
+					  height: collectionView.bounds.size.width/2)
 	}
 	func collectionView(_ collectionView: UICollectionView,
 						layout collectionViewLayout: UICollectionViewLayout,
 						minimumLineSpacingForSectionAt section: Int) -> CGFloat {
 		return 0
 	}
-
+	
 	func collectionView(_ collectionView: UICollectionView,
 						layout collectionViewLayout: UICollectionViewLayout,
 						minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
 		return 0
 	}
-
+	
 	func collectionView(_ collectionView: UICollectionView,
 						layout collectionViewLayout: UICollectionViewLayout,
 						insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -196,7 +197,8 @@ extension ImageSearchMasterViewController: UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: SearchHistoryTableViewCell.reuseIdentifier, for: indexPath) as! SearchHistoryTableViewCell
+		let cell = tableView.dequeueReusableCell(withIdentifier: SearchHistoryTableViewCell.reuseIdentifier,
+												 for: indexPath) as! SearchHistoryTableViewCell
 		cell.textLabel?.text = self.searchHistoryDataSource[indexPath.row]
 		return cell
 	}

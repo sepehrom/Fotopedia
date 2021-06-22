@@ -8,7 +8,7 @@
 
 import Foundation
 
-class RemoteImageLoader: ImageLoader {
+class RemoteImageLoader {
 	
 	// MARK: - Properties
 	private let networkManager: ImageNetworkManager
@@ -16,12 +16,15 @@ class RemoteImageLoader: ImageLoader {
 	init(networkManager: ImageNetworkManager) {
 		self.networkManager = networkManager
 	}
-	
+}
+
+// MARK: - ImageLoaderProtocol
+extension RemoteImageLoader: ImageLoader {
 	func loadImages(searchTerm: String,
-					page: Int,
+					pageNumber: Int,
 					successCallback: @escaping ImageSearchSuccessResponseHandler,
 					failureCallback: @escaping ImageSearchFailureResponseHandler) {
-		networkManager.fetchImagesFromFlickr(service: .photosSearch(searchTerm: searchTerm, page: page),
+		networkManager.fetchImagesFromFlickr(service: .photosSearch(searchTerm: searchTerm, pageNumber: pageNumber),
 											 successCallback: { (imageDataArray) in
 												successCallback(imageDataArray)
 											 }, failureCallback: { (error) in

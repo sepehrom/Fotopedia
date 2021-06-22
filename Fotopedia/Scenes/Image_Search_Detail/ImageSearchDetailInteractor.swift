@@ -20,12 +20,14 @@ class ImageSearchDetailInteractor: BaseInteractor {
     // MARK: - Methods
 }
 
+// MARK: - ImageSearchDetailInteractorProtocol
 extension ImageSearchDetailInteractor: ImageSearchDetailInteractorProtocol {
     func viewDidLoad() {
         
     }
 }
 
+// MARK: - ImagePresentationDelegate
 extension ImageSearchDetailInteractor: ImagePresentationDelegate {
 	func handleImagePresentation(_ imageURL: String) {
 		presenter.presentImage(imageURL)

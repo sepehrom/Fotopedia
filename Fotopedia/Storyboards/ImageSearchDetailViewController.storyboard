@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wAQ-Lg-nkc">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,23 +13,23 @@
             <objects>
                 <viewController id="wAQ-Lg-nkc" customClass="ImageSearchDetailViewController" customModule="Fotopedia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4xN-48-H36" customClass="ImageSearchDetailView" customModule="Fotopedia" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Fw-oH-rTn">
-                                <rect key="frame" x="0.0" y="44" width="428" height="848"/>
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XRq-1g-StY">
-                                <rect key="frame" x="64.333333333333371" y="318.33333333333337" width="299.33333333333326" height="299.33333333333337"/>
+                                <rect key="frame" x="58.666666666666686" y="290.66666666666669" width="273" height="273.00000000000006"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noImageSelected" translatesAutoresizingMaskIntoConstraints="NO" id="TJr-mG-FjP">
-                                        <rect key="frame" x="104.66666666666669" y="67.333333333333371" width="90" height="89.666666666666686"/>
+                                        <rect key="frame" x="95.333333333333343" y="61.333333333333321" width="82" height="81.666666666666686"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="TJr-mG-FjP" secondAttribute="height" multiplier="1:1" id="JQ6-7w-lDO"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQT-aI-vNf">
-                                        <rect key="frame" x="8" y="173" width="283.33333333333331" height="21"/>
+                                        <rect key="frame" x="8" y="159" width="257" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -77,6 +77,11 @@
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="Jpl-5c-76a"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
                             <mask key="constraints">
                                 <include reference="Jpl-5c-76a"/>
                             </mask>

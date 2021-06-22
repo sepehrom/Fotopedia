@@ -28,14 +28,14 @@ class ImageSearchMasterView: UIView {
         super.awakeFromNib()
 		self.backgroundColor = UIColor.systemBackground
 		
-		self.emptyStateReasonLabel.numberOfLines = 0
-		self.emptyStateReasonLabel.textAlignment = .center
-		self.emptyStateReasonImage.backgroundColor = .clear
+		self.emptyStateReasonLabel.numberOfLines    = 0
+		self.emptyStateReasonLabel.textAlignment    = .center
+		self.emptyStateReasonImage.backgroundColor  = .clear
 		
-		self.collectionView.keyboardDismissMode = .onDrag
-		self.collectionView.backgroundColor = UIColor.systemBackground
+		self.collectionView.keyboardDismissMode     = .onDrag
+		self.collectionView.backgroundColor         = UIColor.systemBackground
 		
-		self.searchHistoryTableView.isHidden = true
+		self.searchHistoryTableView.isHidden        = true
 		self.searchHistoryTableView.tableFooterView = UIView(frame: CGRect.zero)
     }
 }

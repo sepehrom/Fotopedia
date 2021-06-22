@@ -8,40 +8,31 @@
 
 import Foundation
 
-enum UserDefaultsKeys: String {
-	case searchHistory = "searchHistory"
-}
-
-protocol UserDefaultsManagerProtocol {
-	func set(_ value: String, forKey key: UserDefaultsKeys)
-	func set(_ value: [String], forKey key: UserDefaultsKeys)
-	
-	func string(forKey key: UserDefaultsKeys) -> String?
-	func stringArray(forKey key: UserDefaultsKeys) -> [String]?
-	
-	func clear(forKey key: UserDefaultsKeys)
-	func synchronize()
-}
-
-class UserDefaultsManager: UserDefaultsManagerProtocol {
-	
+class UserDefaultsManager {
 	let sharedUserDefaults: UserDefaults?
 	
 	init() {
 		sharedUserDefaults = UserDefaults.standard
 	}
 	
+	private func set(value: Any?, forKey key: UserDefaultsKeys) {
+		sharedUserDefaults?.set(value, forKey: key.rawValue)
+		sharedUserDefaults?.synchronize()
+	}
+	
+	private func value(forKey key: UserDefaultsKeys) -> Any? {
+		return sharedUserDefaults?.value(forKey: key.rawValue)
+	}
+}
+
+// MARK: - UserDefaultsManagerProtocol
+extension UserDefaultsManager: UserDefaultsManagerProtocol {
 	func set(_ value: String, forKey key: UserDefaultsKeys) {
 		set(value: value as Any, forKey: key)
 	}
 	
 	func set(_ value: [String], forKey key: UserDefaultsKeys) {
 		set(value: value, forKey: key)
-	}
-	
-	private func set(value: Any?, forKey key: UserDefaultsKeys) {
-		sharedUserDefaults?.set(value, forKey: key.rawValue)
-		sharedUserDefaults?.synchronize()
 	}
 	
 	func string(forKey key: UserDefaultsKeys) -> String? {
@@ -51,10 +42,6 @@ class UserDefaultsManager: UserDefaultsManagerProtocol {
 	
 	func stringArray(forKey key: UserDefaultsKeys) -> [String]? {
 		return value(forKey: key) as? [String]
-	}
-	
-	private func value(forKey key: UserDefaultsKeys) -> Any? {
-		return sharedUserDefaults?.value(forKey: key.rawValue)
 	}
 	
 	func clear(forKey key: UserDefaultsKeys) {

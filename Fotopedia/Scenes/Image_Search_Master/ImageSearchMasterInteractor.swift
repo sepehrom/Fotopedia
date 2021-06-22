@@ -66,7 +66,7 @@ extension ImageSearchMasterInteractor: ImageSearchMasterInteractorProtocol {
 			updateSearchHistory(searchTerm: searchTerm)
 		}
 		imageLoader!.loadImages(searchTerm: searchTerm,
-								page: lastFetchedPageNumber+1,
+								pageNumber: lastFetchedPageNumber+1,
 								successCallback: { imageDataArray in
 									if (self.lastFetchedPageNumber == 0) {
 										self.currentImageDataArray = imageDataArray

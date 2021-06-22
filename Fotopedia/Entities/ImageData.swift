@@ -10,12 +10,10 @@ import Foundation
 
 struct ImageData {
 	var identifier: String
-	var owner: String
-	var secret: String
-	var server: String
-	var farm: Int
-	var title: String
-	var isPublic: Bool
-	var isFriend: Bool
-	var isFamily: Bool
+	var owner:      String
+	var secret:     String
+	var server:     String
+	var farm:       Int
+	var title:      String
+	var isPublic:   Bool
 }

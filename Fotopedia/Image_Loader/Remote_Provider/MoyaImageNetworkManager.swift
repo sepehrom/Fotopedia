@@ -20,20 +20,11 @@ enum APIError: LocalizedError {
 	}
 }
 
-class MoyaImageNetworkManager: ImageNetworkManager {
+class MoyaImageNetworkManager {
 	private var imageSearchResponseParser: ImageSearchResponseParser?
 	private init() {}
 	init(responseParser: ImageSearchResponseParser) {
 		self.imageSearchResponseParser = responseParser
-	}
-	
-	func fetchImagesFromFlickr(service: FlickrAPIService,
-							   successCallback: @escaping ImageSearchSuccessResponseHandler,
-							   failureCallback: @escaping ImageSearchFailureResponseHandler) {
-		makeNetworkRequestForFetchingImagesFromFlickrAPI(service: service,
-														 successCallback: successCallback,
-														 failureCallback: failureCallback,
-														 networkProvider: MoyaProvider<FlickrAPIService>())
 	}
 	
 	func makeNetworkRequestForFetchingImagesFromFlickrAPI(service: FlickrAPIService,
@@ -62,5 +53,17 @@ class MoyaImageNetworkManager: ImageNetworkManager {
 				failureCallback(error)
 			}
 		}
+	}
+}
+
+// MARK: - ImageNetworkManager
+extension MoyaImageNetworkManager: ImageNetworkManager {
+	func fetchImagesFromFlickr(service: FlickrAPIService,
+							   successCallback: @escaping ImageSearchSuccessResponseHandler,
+							   failureCallback: @escaping ImageSearchFailureResponseHandler) {
+		makeNetworkRequestForFetchingImagesFromFlickrAPI(service: service,
+														 successCallback: successCallback,
+														 failureCallback: failureCallback,
+														 networkProvider: MoyaProvider<FlickrAPIService>())
 	}
 }
