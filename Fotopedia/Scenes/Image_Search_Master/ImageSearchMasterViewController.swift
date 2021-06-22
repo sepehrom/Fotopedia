@@ -69,6 +69,11 @@ class ImageSearchMasterViewController: BaseViewController {
 		updateNavigationTitle(searchTerm: "")
 	}
 	
+	override func viewWillLayoutSubviews() {
+		super.viewWillLayoutSubviews()
+		imageSearchMasterView.collectionView.collectionViewLayout.invalidateLayout()
+	}
+	
 	func updateNavigationTitle(searchTerm: String) {
 		if (searchTerm.trimmingCharacters(in: .whitespacesAndNewlines) == "") {
 			navigationItem.title = "Fotopedia"

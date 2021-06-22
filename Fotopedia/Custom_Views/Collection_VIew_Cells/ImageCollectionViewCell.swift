@@ -18,6 +18,6 @@ class ImageCollectionViewCell: UICollectionViewCell {
 		self.imageView.layer.masksToBounds = true
 		self.imageView.contentMode = .scaleAspectFill
 		self.imageView.layer.borderWidth = 4.0
-		self.imageView.layer.borderColor = UIColor.black.cgColor
+		self.imageView.layer.borderColor = UIColor.darkGray.cgColor
 	}
 }

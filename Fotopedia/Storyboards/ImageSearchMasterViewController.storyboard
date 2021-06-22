@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wAQ-Lg-nkc">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,24 +14,24 @@
             <objects>
                 <viewController id="wAQ-Lg-nkc" customClass="ImageSearchMasterViewController" customModule="Fotopedia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4xN-48-H36" customClass="ImageSearchMasterView" customModule="Fotopedia" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="pCA-ha-ENa">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kaZ-ST-w7z">
-                                <rect key="frame" x="56.5" y="202.5" width="262.5" height="262.5"/>
+                                <rect key="frame" x="240" y="94" width="187.5" height="187.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="nNE-ML-Uee">
-                                        <rect key="frame" x="65.5" y="32.5" width="131" height="131.5"/>
+                                        <rect key="frame" x="46.5" y="23" width="94" height="94"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="nNE-ML-Uee" secondAttribute="height" multiplier="1:1" id="ERG-65-28K"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49Z-2T-rME">
-                                        <rect key="frame" x="8" y="188.5" width="246.5" height="20.5"/>
+                                        <rect key="frame" x="8" y="141.5" width="171.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -49,7 +49,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dEW-cu-iWO">
-                                <rect key="frame" x="8" y="64" width="359" height="611"/>
+                                <rect key="frame" x="8" y="64" width="651" height="319"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="joy-pF-Xsd">
                                     <size key="itemSize" width="186" height="182"/>
@@ -59,7 +59,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="bG8-s3-e5t" customClass="ImageCollectionViewCell" customModule="Fotopedia" customModuleProvider="target">
-                                        <rect key="frame" x="86.5" y="0.0" width="186" height="182"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="186" height="182"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Hax-Mr-yCm">
                                             <rect key="frame" x="0.0" y="0.0" width="186" height="182"/>
@@ -83,21 +83,21 @@
                                 </cells>
                             </collectionView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ooE-AN-DG0">
-                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                                <rect key="frame" x="323.5" y="177.5" width="20" height="20"/>
                             </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vRY-Ph-OhZ">
-                                <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                                <rect key="frame" x="0.0" y="56" width="667" height="319"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchHistoryCell" id="GoB-5Y-5Y8" customClass="SearchHistoryTableViewCell" customModule="Fotopedia" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="667" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GoB-5Y-5Y8" id="qgd-nE-gio">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="667" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchHistory" translatesAutoresizingMaskIntoConstraints="NO" id="2fd-CC-V4E">
-                                                    <rect key="frame" x="335" y="10" width="24" height="24"/>
+                                                    <rect key="frame" x="627" y="10" width="24" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="4qF-2N-U67"/>
                                                         <constraint firstAttribute="height" constant="24" id="9Vn-mv-snq"/>
@@ -124,6 +124,7 @@
                             <constraint firstItem="dEW-cu-iWO" firstAttribute="leading" secondItem="9gO-lw-5Q7" secondAttribute="leading" constant="8" id="Agk-mX-nNE"/>
                             <constraint firstItem="kaZ-ST-w7z" firstAttribute="centerY" secondItem="4xN-48-H36" secondAttribute="centerY" id="Iqh-ac-j5S"/>
                             <constraint firstItem="dEW-cu-iWO" firstAttribute="trailing" secondItem="9gO-lw-5Q7" secondAttribute="trailing" constant="-8" id="M9z-N1-JdY"/>
+                            <constraint firstItem="kaZ-ST-w7z" firstAttribute="height" secondItem="4xN-48-H36" secondAttribute="height" multiplier="0.5" id="TgV-tK-oRs"/>
                             <constraint firstItem="dEW-cu-iWO" firstAttribute="bottom" secondItem="9gO-lw-5Q7" secondAttribute="bottom" constant="8" id="VfH-lz-Bh3"/>
                             <constraint firstItem="vRY-Ph-OhZ" firstAttribute="leading" secondItem="9gO-lw-5Q7" secondAttribute="leading" id="VhF-sa-ixr"/>
                             <constraint firstItem="kaZ-ST-w7z" firstAttribute="centerX" secondItem="pCA-ha-ENa" secondAttribute="centerX" id="amo-JB-y1O"/>
@@ -133,6 +134,22 @@
                             <constraint firstItem="9gO-lw-5Q7" firstAttribute="trailing" secondItem="vRY-Ph-OhZ" secondAttribute="trailing" id="xzo-fs-fNL"/>
                             <constraint firstItem="pCA-ha-ENa" firstAttribute="top" secondItem="9gO-lw-5Q7" secondAttribute="top" id="zBi-9f-94J"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="TgV-tK-oRs"/>
+                                <exclude reference="oaq-4D-lWk"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="TgV-tK-oRs"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="oaq-4D-lWk"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <outlet property="collectionView" destination="dEW-cu-iWO" id="rG4-0L-4cy"/>
                             <outlet property="emptyStateReasonImage" destination="nNE-ML-Uee" id="d2f-Ac-FKf"/>
@@ -151,7 +168,7 @@
     </scenes>
     <resources>
         <image name="imageIcon" width="512" height="512"/>
-        <image name="searchHistory" width="24" height="24"/>
+        <image name="searchHistory" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
